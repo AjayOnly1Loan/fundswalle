@@ -18,14 +18,15 @@ import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import CalculateIcon from '@mui/icons-material/Calculate';
 import { keyframes } from '@mui/system';
 
-import logo from '../assets/image/Artboard 1.webp'; // Adjust the path based on your structure
+import logo from '../assets/image/Funds Wale Logo SVG.svg'; // Adjust the path based on your structure
 
 // Blinking animation for the "Apply Now" button
 const blinking = keyframes`
-  0% { background-color: gray; color: white; }
-  50% { background-color: #fc8403; color: black; }
+  0% { background-color: white; color: #240844; }
+  50% { background-color: #240844; color: white; }
   100% { background-color: black; color: white; }
 `;
+
 
 const Header = () => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -66,14 +67,15 @@ const Header = () => {
           <Link
             to="/"
             onClick={scrollToTop}
-            style={{ display: 'flex', alignItems: 'center', zIndex: 10 }}
+            style={{ display: 'flex', alignItems: 'center', zIndex: 10 ,paddingLeft:{xs:6,md:4} }}
           >
             <img
               src={logo}
               alt="Logo"
               style={{
-                width: '50%',
-                height: '50%',
+                borderRadius:7,
+                width: '40%',
+                height:{xs:'20%',md:'40%'} ,
                 objectFit: 'contain',
                 zIndex: 10,
               }}
@@ -85,7 +87,7 @@ const Header = () => {
             edge="end"
             color="inherit"
             onClick={handleMenu}
-            sx={{ display: { xs: 'block', md: 'none' }, color: '#0b2747', padding: '8px' }}
+            sx={{ display: { xs: 'block', md: 'none' }, color: '#0b2747', padding: '8px',marginRight:2 }}
           >
             <Menu />
           </IconButton>
@@ -149,24 +151,25 @@ const Header = () => {
               flexGrow: 1, // To allow centering
             }}
           >
-            <Link
-              to="/"
-              onClick={scrollToTop}
-              style={{
-                color: '#0b2747',
-                display: 'flex',
-                alignItems: 'center',
-                textDecoration: 'none',
-                padding: '8px',
-                fontWeight: '700',
-                fontFamily: 'Roboto, sans-serif',
-                transition: 'color 0.3s ease',
-              }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = 'orange')}
-              onMouseLeave={(e) => (e.currentTarget.style.color = '#0b2747')}
-            >
-              <HomeIcon sx={{ mr: 1 }} /> Home
-            </Link>
+           <Link
+  to="/"
+  onClick={scrollToTop}
+  style={{
+    color: '#0b2747', // Default color
+    display: 'flex',
+    alignItems: 'center',
+    textDecoration: 'none',
+    padding: '8px',
+    fontWeight: '700',
+    fontFamily: 'Roboto, sans-serif',
+    transition: 'color 0.3s ease', // Smooth transition
+  }}
+  onMouseEnter={(e) => (e.currentTarget.style.color = '#240844')} // Dark hover
+  onMouseLeave={(e) => (e.currentTarget.style.color = '#0b2747')} // Reset to default
+>
+  HOME
+</Link>
+
 
             <Link
               to="/about-us"
@@ -181,10 +184,10 @@ const Header = () => {
                 fontFamily: 'Roboto, sans-serif',
                 transition: 'color 0.3s ease',
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = 'orange')}
+              onMouseEnter={(e) => (e.currentTarget.style.color = '#240844')}
               onMouseLeave={(e) => (e.currentTarget.style.color = '#0b2747')}
             >
-              <InfoIcon sx={{ mr: 1 }} /> About Us
+          ABOUT US
             </Link>
 
             <Link
@@ -200,10 +203,10 @@ const Header = () => {
                 fontFamily: 'Roboto, sans-serif',
                 transition: 'color 0.3s ease',
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = 'orange')}
+              onMouseEnter={(e) => (e.currentTarget.style.color = '#240844')}
               onMouseLeave={(e) => (e.currentTarget.style.color = '#0b2747')}
             >
-              <ContactPageIcon sx={{ mr: 1 }} /> Contact Us
+           CONTACT US
             </Link>
 
             <Link
@@ -219,10 +222,10 @@ const Header = () => {
                 fontFamily: 'Roboto, sans-serif',
                 transition: 'color 0.3s ease',
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = 'orange')}
+              onMouseEnter={(e) => (e.currentTarget.style.color = '#240844')}
               onMouseLeave={(e) => (e.currentTarget.style.color = '#0b2747')}
             >
-              <ApplyNowIcon sx={{ mr: 1 }} /> Repay Now
+              REPAY NOW
             </Link>
 
             <Link
@@ -238,10 +241,10 @@ const Header = () => {
                 fontFamily: 'Roboto, sans-serif',
                 transition: 'color 0.3s ease',
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = 'orange')}
+              onMouseEnter={(e) => (e.currentTarget.style.color = '#240844')}
               onMouseLeave={(e) => (e.currentTarget.style.color = '#0b2747')}
             >
-              <CalculateIcon sx={{ mr: 1 }} /> Loan Calculator
+              LOAN CALCULATOR
             </Link>
           </Box>
 
@@ -269,7 +272,7 @@ const Header = () => {
                 },
               }}
             >
-              Apply Now
+              APPLY NOW
             </Button>
           </Box>
 

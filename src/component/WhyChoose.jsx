@@ -50,7 +50,7 @@ const WhyChoose = () => {
         flexDirection: { xs: "column", md: "row" },
         alignItems: "flex-start",
         justifyContent: "space-between",
-        padding: { xs: 2, md: 7 },
+        paddingX: { xs: 2, md: 7 },
       }}
     >
       {/* Left Side: Title and Description */}
@@ -59,8 +59,8 @@ const WhyChoose = () => {
           Why Choose Us?
         </Typography>
         <Typography variant="body1" sx={{ color: "gray" }}>
-          At Fundswalle, we believe in making our customers feel safe, secure
-          and empowered on financial grounds. We provide financial assistance.
+        Your dreams don’t have to wait anymore! Come to us and apply for personal finance now
+        and we will help you resolve your financial concerns right away!
         </Typography>
       </Box>
 

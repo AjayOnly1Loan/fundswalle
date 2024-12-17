@@ -71,17 +71,8 @@ const LoanCalculator = () => {
 
 
     return (
-        <Box
-            sx={{
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                background: '#f9f9f9', 
-
-                paddingY:{xs:1,md:1} , // Adds vertical padding
-              
-            }}
-        >
-            <Box sx={{  marginBottom:{xs:2,md:7} }}>
+        <Box>
+            <Box sx={{  background: '#f9f9f9', paddingBottom:{xs:2,md:7} }}>
                 <Container>
                                        <Grid 
                             container 
@@ -89,7 +80,7 @@ const LoanCalculator = () => {
                             spacing={0} 
                             justifyContent="center"
                             >                      
-                              <Grid item xs={12} md={12}>
+                              <Grid >
                             <Paper
                                 elevation={12}
                                 sx={{
@@ -99,8 +90,7 @@ const LoanCalculator = () => {
                                     borderright:'none',
 
                                     textAlign: 'center',
-                                    background: 'white', // Transparent background to see blur effect
-                                    color: 'black',
+                                    backgroundColor: '#ABC8CB',                                    color: 'black',
                                     minHeight: '400px',
                                     animation: calculatorInView ? `${slideInLeft} 0.5s ease` : 'none',
                                     display: 'flex',
@@ -372,7 +362,7 @@ const LoanCalculator = () => {
                                 variant="contained"
                                 sx={{
                                     marginTop:{xs:5,md:5} ,
-                                    backgroundColor: '#4D0F4A',
+                                    backgroundColor: '#240844',
                                     borderRadius: '16px',
                                     paddingY: 2,
                                     paddingX:{xs:10,md:20},

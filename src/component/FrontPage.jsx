@@ -1,10 +1,8 @@
 import React from "react";
 import { Box, Typography, Button, keyframes } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
-import bannerImage from "../assets/image/banner qua.webp"; // Adjust the path as needed
-import image1 from "../assets/image/Our-Mission.jpg"; // Replace with actual image path
-import image2 from "../assets/image/Our-Mission.jpg"; // Replace with actual image path
-import image3 from "../assets/image/Our-Mission.jpg"; // Replace with actual image path
+import bannerImage from "../assets/image/Frame 538.png"; // Adjust the path as needed
+import image1 from "../assets/image/Group 79 (1).png"; // Replace with actual image path
 
 // Keyframes for animations
 const slideInFromLeft = keyframes`
@@ -33,7 +31,7 @@ const FrontPage = () => {
   const theme = useTheme();
 
   return (
-    <Box sx={{ backgroundColor: "#f9f9f9", padding: 3 }}>
+    <Box sx={{ backgroundColor: "#f9f9f9", paddingX:{xs:1,md:3} ,paddingTop:1 }}>
       <Box
         sx={{
           overflowX: "hidden",
@@ -105,7 +103,7 @@ const FrontPage = () => {
 
             <Button
               variant="contained"
-              href="/apply-now"
+              href="/contact-us"
               sx={{
                 borderRadius: "80px",
                 backgroundColor: "white",
@@ -119,63 +117,36 @@ const FrontPage = () => {
                 },
               }}
             >
-              Feature
+              Reach Us
             </Button>
           </Box>
         </Box>
 
+       
+              <Box
+        sx={{
+          display: 'flex', // Flexbox to align content
+          justifyContent: 'center', // Center horizontally
+          alignItems: 'center', // Center vertically
+          width: 'auto', // Allow width to adjust to the image size
+          height: 'auto', // Allow height to adjust to the image size
+        }}
+      >
         <Box
+          component="img"
+          src={image1}
+          alt="Customer 1"
           sx={{
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
-            justifyContent: "center",
-            mt: theme.spacing(6),
-            mb: theme.spacing(1),
-            animation: `${slideInFromRight} 1s ease-out`,
+            width: "auto", // Automatically adjust width based on the image's original size
+            height: "auto", // Automatically adjust height based on the image's original size
+            objectFit: "contain", // Ensure the image fits inside the circle without cropping
           }}
-        >
-          <Box>
-            <Box
-              component="img"
-              src={image1}
-              alt="Customer 1"
-              sx={{
-                width: "80px",
-                height: "80px",
-                borderRadius: "50%",
-                objectFit: "cover",
-              }}
-            />
-          </Box>
-          <Box>
-            <Box
-              component="img"
-              src={image2}
-              alt="Customer 2"
-              sx={{
-                width: "80px",
-                height: "80px",
-                borderRadius: "50%",
-                objectFit: "cover",
-              }}
-            />
-          </Box>
-          <Box>
-            <Box
-              component="img"
-              src={image3}
-              alt="Customer 3"
-              sx={{
-                width: "80px",
-                height: "80px",
-                borderRadius: "50%",
-                objectFit: "cover",
-              }}
-            />
-          </Box>
-        </Box>
+        />
+      </Box>
 
+         
+          
+      
         <Typography
           sx={{
             textAlign: "center",
@@ -190,14 +161,14 @@ const FrontPage = () => {
 
         <Box
           sx={{
-            paddingLeft: { xs: 0, md: "100px" },
-            paddingRight: { xs: 0, md: "100px" },
+            paddingLeft: { xs: 0, md: "80px" },
+            paddingRight: { xs: 0, md: "80px" },
             width: "100%",
             textAlign: "center",
-            mx: "90px",
-            backgroundColor: "rgba(255, 255, 255, 0)",
-            borderRadius: "80px",
-            overflow: "hidden",
+            // mx: "90px",
+            // backgroundColor: "rgba(255, 255, 255, 0)",
+            // borderRadius: "80px",
+            // overflow: "hidden",
           }}
         >
           <Box
@@ -207,9 +178,9 @@ const FrontPage = () => {
             sx={{
               marginTop: "50px",
               width: "100%",
-              maxHeight: "320px",
+              maxHeight: "450px",
               objectFit: "cover",
-              borderRadius: "80px",
+              borderRadius: 5,
               animation: `${slideInFromLeft} 1.5s ease-out`,
             }}
           />

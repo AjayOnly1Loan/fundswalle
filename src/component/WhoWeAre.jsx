@@ -177,8 +177,8 @@ const WhoWeAre = () => {
       fontSize: { xs: '14px', sm: '16px' },
       padding: { xs: '8px 16px', sm: '6px 30px' },
       '&:hover': {
-        backgroundColor: '#fc8403',
-        color: 'black',
+        backgroundColor: 'white',
+        color: '#240844',
       },
     }}
   >

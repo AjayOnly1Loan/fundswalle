@@ -19,7 +19,8 @@ const AboutUs = () => {
       
         backgroundColor: '#f9f9f9',
         minHeight: '100vh',
-        padding: 3,
+        paddingX: 3,
+        paddingY:1,
       }}
     >
       
@@ -27,10 +28,9 @@ const AboutUs = () => {
       {/* Content Section */}
       <Box
         sx={{
-          marginTop:{xs:2,md:4},
+          marginTop:{xs:4,md:4},
           background: '  #ABC8CB',
           minHeight: '100vh',
-          padding: '0px',
           borderRadius:7
         }}
       >
@@ -194,7 +194,8 @@ const AboutUs = () => {
                     color: '#fff',
                     padding: '10px',
                     '&:hover': {
-                      backgroundColor: '#fc8403',
+                      backgroundColor: 'white',
+                      color:'black'
                     },
                   }}
                 >

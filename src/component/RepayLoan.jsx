@@ -9,18 +9,22 @@ const RepayLoan = () => {
   return (
     <Box 
       sx={{ 
+        paddingBottom:4,
         background: '#f9f9f9',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         minHeight: '100vh',
-        padding: { xs: '20px', sm: '45px' }, // Adjust padding for small screens
+        paddingX: { xs: 2, sm: 3 }, // Adjust padding for small screens
+        paddingTop:1
       }}
     >
       {/* Image Section */}
      
         <Box
         sx={{
+          background: '#f9f9f9',
+
           position: 'relative',
           width: '100%',
           height: { xs: '20vh', md: '60vh' },
@@ -62,7 +66,7 @@ const RepayLoan = () => {
             display: 'inline-block',
             animation: 'scroll-text 20s linear infinite',
             fontSize: { xs: '14px', sm: '18px' },
-            color: '#B22222',
+            color: 'red',
             fontWeight: 'bold',
             textAlign: 'center',
           }}
@@ -89,6 +93,8 @@ const RepayLoan = () => {
       {/* Warning Message */}
       <Box 
         sx={{ 
+          background: '#f9f9f9',
+
           textAlign: 'center', 
           borderRadius: '30px',
           padding:{xs:'5px',md:'16px'},
@@ -110,13 +116,15 @@ const RepayLoan = () => {
             mb: 2,
           }}
         >
-          <strong style={{fontSize:'30px', color:'#fc8403'}}>Warning:</strong> We are not liable for any payments made in <br />
+          <strong style={{fontSize:'30px', color:'#240844'}}>Warning:</strong> We are not liable for any payments made in <br />
           personal accounts of employees. Please make all <br />
           payments in the company’s account only.
         </Typography>
 
         <Box 
           sx={{ 
+            background: '#f9f9f9',
+
             display: 'flex', 
             alignItems: 'center', 
             justifyContent: 'center', 
@@ -130,12 +138,11 @@ const RepayLoan = () => {
           variant="body2" 
           sx={{ 
             mt: 1, 
-            color:'#fc8403',
+            color:'#240844',
             fontFamily: 'Inter',
             fontSize: { xs: '16px', sm: '25px' }, // Adjust font size for small screens
             lineHeight: '36px',
             letterSpacing: '-0.408px',
-            mb: 5,
           }}
         >
 
@@ -147,7 +154,7 @@ const RepayLoan = () => {
 
       {/* Main Content */}
       <Box mt={10} sx={{ background:'#D9D9D9',
-          borderRadius:'30px', margin:1}}>
+          borderRadius:'30px'}}>
   <Grid container spacing={4} alignItems="center">
     {/* Heading Section */}
     <Grid item xs={12} md={4}>
@@ -164,7 +171,7 @@ const RepayLoan = () => {
       >
           Please share a screenshot of your transfer <br />
                     from your bank/Google Pay to <br />
-                    <strong style={{color:'#fc8403'}}>recovery@fundswalle.com</strong>.
+                    <strong style={{color:'#240844'}}>recovery@fundswalle.com</strong>.
 
       </Typography>
     </Grid>

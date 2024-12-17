@@ -2,10 +2,10 @@ import React, { useEffect, useRef,useState } from 'react';
 import { Typography, Box ,Paper, Accordion,
   AccordionSummary,Button,
   AccordionDetails, } from '@mui/material';
-import VisionImage from '../assets/image/image.png'; // Import your vision image here
-import aboutImage from '../assets/image/About-Us-QUA.jpg'; // Correct image path for about us
+import VisionImage from '../assets/image/oUR-Vission-Funds-Wale.jpg'; // Import your vision image here
+import aboutImage from '../assets/image/About-Us--Funds-Wale.jpg'; // Correct image path for about us
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import MissionImage from '../assets/image/Our-Mission.jpg'; // Import your mission image here
+import MissionImage from '../assets/image/Our-Mission-Funds-Walle.jpg'; // Import your mission image here
 import AutoplayCarousel from './WhyChoose';
 import WhyChoose from './WhyChoose';
 
@@ -52,12 +52,14 @@ const AboutUs = () => {
   return (
     <Box 
     sx={{ 
+      paddingBottom:6,
       background: '#f9f9f9',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
       minHeight: '100vh',
-      padding: { xs: '20px', sm: '45px' }, // Adjust padding for small screens
+      paddingX: { xs: 1, sm:3 }, // Adjust padding for small screens
+      paddingTop:1,
     }}
   >
     {/* Image Section */}
@@ -90,14 +92,14 @@ const AboutUs = () => {
             <Typography 
           variant="h4" // Heading style
           sx={{
-            marginTop: '50px', // Margin on top
+            marginTop:{xs:1,md:6} , // Margin on top
             fontFamily: 'Inter',
-            fontSize: { xs: '2.4rem', md: '3rem' },
+            fontSize: { xs: '2rem', md: '2.5rem' },
             fontWeight: 700, // Font weight
             lineHeight: '73px', // Line height
             letterSpacing: '-0.408px', // Letter spacing
             textAlign: 'center',
-            color:'#fc8403',
+            color:'#240844',
             marginBottom: { xs: '20px', md: '2px' }, // Responsive margin-bottom
           }}
         >
@@ -115,6 +117,8 @@ const AboutUs = () => {
             lineHeight: '40px', 
             letterSpacing: '-0.708px', // Letter spacing
             textAlign: 'center',
+            color:'rgba(0, 0, 0, 0.7) ',
+
             marginBottom: { xs: '40px', md: '20px' }, // Responsive bottom margin
           }}
         >
@@ -133,6 +137,7 @@ Welcome to Fundswalle - your one-stop shop in providing personal finance loans t
             lineHeight: '40px', 
             letterSpacing: '-0.708px', // Letter spacing
             textAlign: 'center',
+            color:'rgba(0, 0, 0, 0.7) ',
             marginBottom: { xs: '40px', md: '60px' }, // Responsive bottom margin
           }}
         >
@@ -144,7 +149,7 @@ Welcome to Fundswalle - your one-stop shop in providing personal finance loans t
    </Typography>
             
       {/* mission & vission */}
-             <Box
+                  <Box
               sx={{
                 backgroundImage: `url(${MissionImage})`, // Use the image as a background
                 backgroundSize: "cover",
@@ -182,7 +187,7 @@ Welcome to Fundswalle - your one-stop shop in providing personal finance loans t
                   component="h2"
                   gutterBottom
                   sx={{
-                    color: "#fc8403",
+                    color: '#240844',
                     fontWeight: "bold",
                     textAlign: { xs: "center", md: "left" }, // Center align for smaller screens
                   }}
@@ -209,10 +214,9 @@ Welcome to Fundswalle - your one-stop shop in providing personal finance loans t
 
               {/* Image Box */}
               <Box
-              
                 sx={{
                   width: { xs: "100%", md: "50%" }, // Adjust the image size
-                  height: { xs: "250px", md: "400px" }, // Responsive height
+                  height: { xs: "200px", md: "400px" }, // Responsive height
                   borderRadius: "30px",
                   objectFit: "cover",
                   marginTop: { xs: "20px", md: "0" }, // Spacing for smaller screens
@@ -222,99 +226,98 @@ Welcome to Fundswalle - your one-stop shop in providing personal finance loans t
             </Box>
 
 
-              <Box
+            <Box
+            sx={{
+              backgroundImage: `url(${VisionImage})`, // Use image as background
+              backgroundSize: "cover", // Ensures the image covers the entire box
+              backgroundPosition: "center", // Centers the image
+              backgroundRepeat: "no-repeat", // Prevents image tiling
+              borderRadius: "30px",
+              marginLeft: { xs: 0, md: "50px" },
+              marginRight: { xs: 0, md: "50px" },
+              marginTop: { xs: "20px", md: "100px" },
+              marginBottom: "50px",
+              display: "flex",
+              flexDirection: { xs: "column", md: "row" }, // Responsive layout
+              justifyContent: "space-between",
+              alignItems: "center",
+              padding: 5,
+              position: "relative",
+              gap: 2, // Adds space between items
+            }}
+          >
+            {/* Image Box */}
+            <Box
+              sx={{
+                width: { xs: "100%", md: "50%" }, // Adjust image width for better responsiveness
+                height: { xs: "200px", md: "400px" }, // Dynamic height for responsiveness
+                borderRadius: "30px",
+                objectFit: "cover",
+                marginTop: { xs: "20px", md: "0" }, // Adds margin top for small screens
+                marginLeft: { md: 3 },
+                marginBottom: { xs: "20px", md: "0" }, // Adds margin for small screens
+              }}
+            />
+
+            {/* Content Box */}
+            <Box
+              sx={{
+                background: "white",
+                border: "none",
+                textAlign: "left",
+                flex: 1,
+                zIndex: 1,
+                width: { xs: "90%", md: "40%" }, // Reduce width
+                height: "auto", // Allow dynamic height
+                padding: 5, // Add padding for spacing
+                borderRadius: "20px", // Optional: rounded edges
+                boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)", // Optional: shadow for better visibility
+              }}
+            >
+              <Typography
+                variant="h4"
+                component="h2"
+                gutterBottom
                 sx={{
-                  backgroundImage: `url(${VisionImage})`, // Use image as background
-                  backgroundSize: "cover", // Ensures the image covers the entire box
-                  backgroundPosition: "center", // Centers the image
-                  backgroundRepeat: "no-repeat", // Prevents image tiling
-                  borderRadius: "30px",
-                  marginLeft: { xs: 0, md: "50px" },
-                  marginRight: { xs: 0, md: "50px" },
-                  marginTop: { xs: "20px", md: "100px" },
-                  marginBottom: "50px",
-                  display: "flex",
-                  flexDirection: { xs: "column", md: "row" }, // Responsive layout
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                  padding: 5,
-                  position: "relative",
-                  gap: 2, // Adds space between items
+                  color: '#240844',
+                  fontWeight: "bold",
                 }}
               >
-                {/* Image Box */}
-                <Box
-                  sx={{
-                    width: { xs: "100%", md: "50%" }, // Adjust image width for better responsiveness
-                    height: "400px", // Prevent image overlap with content
-                    borderRadius: "30px",
-                    objectFit: "cover",
-                    marginTop: { xs: "20px", md: "0" }, // Adds margin top for small screens
-                    marginLeft: { md: 3 },
-                    marginBottom: { xs: "20px", md: "0" }, // Adds margin for small screens
-                  }}
-                />
+                Our Vision
+              </Typography>
+              <Typography
+                variant="body1"
+                sx={{
+                  fontSize: "18px",
+                }}
+              >
+                Our vision at Fundswalle is to redefine how personal finance is accessed by
+                salaried professionals in India. We aim to create a transparent, customer-focused platform that provides access to credit when it’s required by people the most. By making
+                use of the latest technology and leveraging our expertise in financial services, we
+                strive to form a future where financial inclusion is a reality for all, irrespective of their sources of income or financial background.
+              </Typography>
+            </Box>
+          </Box>
 
-                {/* Content Box */}
-                <Box
-                  sx={{
-                    background: "white",
-                    border: "none",
-                    textAlign: "left",
-                    flex: 1,
-                    zIndex: 1,
-                    
-                    width: { xs: "90%", md: "40%" }, // Reduce width
-                    height: "auto", // Allow dynamic height
-                    padding: 5, // Add padding for spacing
-                    borderRadius: "20px", // Optional: rounded edges
-                    boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)", // Optional: shadow for better visibility
-                  }}
-                >
-                  <Typography
-                    variant="h4"
-                    component="h2"
-                    gutterBottom
-                    sx={{
-                      color: "#fc8403",
-                      fontWeight: "bold",
-                    }}
-                  >
-                    Our Vision
-                  </Typography>
-                  <Typography
-                    variant="body1"
-                    sx={{
-                      fontSize: "18px",
-                    }}
-                  >
-                    Our vision at Fundswalle is to redefine how personal finance is accessed by
-                    salaried professionals in India. We aim to create a transparent, customer-focused platform that provides access to credit when it’s required by people the most. By making
-                    use of the latest technology and leveraging our expertise in financial services, we
-                    strive to form a future where financial inclusion is a reality for all, irrespective of their sources of income or financial background.
-                  </Typography>
-                </Box>
-              </Box>
               <WhyChoose/>
 
               <Box
   sx={{
-    backgroundColor: ' #D9D9D9', 
-    backgroundSize: "cover", 
-    backgroundPosition: "center", 
-    backgroundRepeat: "no-repeat", 
+    backgroundColor: '#D9D9D9',
+    backgroundSize: "cover",
+    backgroundPosition: "center",
     borderRadius: "30px",
     marginLeft: { xs: 0, md: "50px" },
     marginRight: { xs: 0, md: "50px" },
     marginTop: { xs: "20px", md: "100px" },
-    marginBottom: "50px",
     display: "flex",
-    flexDirection: { xs: "column", md: "row" }, 
+    flexDirection: { xs: "column", md: "row" }, // Stack content vertically on small screens
     justifyContent: "space-between",
     alignItems: "center",
     padding: 5,
     position: "relative",
-    gap: 2, 
+    gap: 2, // Adds space between items
+    height: { xs: "auto", md: "500px" }, // Adjust height for small and large screens
   }}
 >
   {/* Content Box (on the left side) */}
@@ -356,33 +359,33 @@ Welcome to Fundswalle - your one-stop shop in providing personal finance loans t
     </Typography>
 
     <Button
-  variant="contained"
-  color="primary"
-  sx={{
-    padding: "10px 20px",
-    borderRadius: "10px",
-    fontSize: "16px",
-    fontWeight: "bold",
-    color: 'black',
-    backgroundColor: "transparent", // Transparent button background
-    '&:hover': {
-      backgroundColor: "#333", // Darker shade on hover
-    },
-  }}
-  component="a"  // Use an anchor tag for external links
-  href="apply-now"  // Replace with your external link
-  target="_blank"  // Optionally open the link in a new tab
->
-  Apply Now
-</Button>
-
+      variant="contained"
+      color="primary"
+      sx={{
+        padding: "10px 20px",
+        borderRadius: "10px",
+        fontSize: "16px",
+        fontWeight: "bold",
+        color: 'black',
+        backgroundColor: "transparent", // Transparent button background
+        '&:hover': {
+          backgroundColor: "#333", // Darker shade on hover
+          color: 'white',
+        },
+      }}
+      component="a" // Use an anchor tag for external links
+      href="apply-now" // Replace with your external link
+      target="_blank" // Optionally open the link in a new tab
+    >
+      Apply Now
+    </Button>
   </Box>
 
   {/* Image Box (on the right side) */}
   <Box
     sx={{
       width: { xs: "100%", md: "50%" },
-      height: "400px", 
+      height: { xs: "250px", md: "400px" }, // Responsive height for small and large screens
       borderRadius: "30px",
       objectFit: "cover",
       marginTop: { xs: "20px", md: "0" },

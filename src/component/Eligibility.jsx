@@ -2,9 +2,9 @@ import React from 'react';
 import { Box, Typography, Grid } from '@mui/material';
 
 // Import images
-import eligibilityImage1 from '../assets/image/axis (1).png'; // Replace with the actual path to your image
-import eligibilityImage2 from '../assets/image/axis (1).png'; // Replace with the actual path to your image
-import eligibilityImage3 from '../assets/image/axis (1).png'; // Replace with the actual path to your image
+import eligibilityImage1 from '../assets/image/Credit-Score.png'; // Replace with the actual path to your image
+import eligibilityImage2 from '../assets/image/Secure-Loan (1).png'; // Replace with the actual path to your image
+import eligibilityImage3 from '../assets/image/personal-loan.png'; // Replace with the actual path to your image
 
 const Eligibility = () => {
   return (
@@ -30,15 +30,20 @@ const Eligibility = () => {
               margin: '0 5px', // Reduced margin between boxes
             }}
           >
-            <img
-              src={eligibilityImage1}
-              alt="Eligibility Criteria 1"
-              style={{ width: '120px', height: '120px', marginBottom: '30px' }} // Larger image
-            />
-            
-            <Typography variant='h4' >Credit Score</Typography>
+           <img
+            src={eligibilityImage1}
+            alt="Eligibility Criteria 1"
+            style={{
+              width: '100px',
+              height: '80px',
+              marginBottom: '30px',
+              objectFit: 'contain', // Prevents stretching and keeps the aspect ratio
+            }}
+          />
+
+            <Typography variant='h5' >Credit Score</Typography>
             <br />
-            <Typography variant="h5" color="textSecondary">
+            <Typography variant="h6" color="textSecondary">
               Those who don’t have a good credit score.
             </Typography>
           </Box>
@@ -61,11 +66,15 @@ const Eligibility = () => {
             <img
               src={eligibilityImage2}
               alt="Eligibility Criteria 2"
-              style={{ width: '120px', height: '120px', marginBottom: '30px' }} // Larger image
-            />
-            <Typography variant='h4' >Secured Loan</Typography>
+              style={{
+                width: '100px',
+                height: '80px',
+                marginBottom: '30px',
+                objectFit: 'contain', // Prevents stretching and keeps the aspect ratio
+              }} />
+            <Typography variant='h5' >Secured Loan</Typography>
             <br />
-            <Typography variant="h5" color="textSecondary">
+            <Typography variant="h6" color="textSecondary">
               Those who weren’t able to get a secured loan.
             </Typography>
           </Box>
@@ -88,11 +97,15 @@ const Eligibility = () => {
             <img
               src={eligibilityImage3}
               alt="Eligibility Criteria 3"
-              style={{ width: '120px', height: '120px', marginBottom: '30px' }} // Larger image
-            />
-            <Typography variant='h4' >Personal Loans</Typography>
+              style={{
+                width: '100px',
+                height: '80px',
+                marginBottom: '30px',
+                objectFit: 'contain', // Prevents stretching and keeps the aspect ratio
+              }} />
+            <Typography variant='h5' >Personal Loans</Typography>
             <br />
-            <Typography variant="h5" color="textSecondary">
+            <Typography variant="h6" color="textSecondary">
               Those who have no other resources to avail personal loans.
             </Typography>
           </Box>

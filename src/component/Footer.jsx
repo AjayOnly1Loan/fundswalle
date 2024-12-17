@@ -1,7 +1,7 @@
 import React from 'react';
 import { Email, Phone, LocationOn, Facebook, Twitter, LinkedIn, Instagram, YouTube } from '@mui/icons-material';
 import { Container, Grid, Typography, Link, Box } from '@mui/material';
-import logo from '../assets/image/White.webp';
+import logo from '../assets/image/Funds Wale Logo White SVG.svg';
 import TwitterIcon from '../assets/image/x.jpg'; // Replace with the correct path to your image
 
 
@@ -11,10 +11,9 @@ const linkStyle = {
   color: '#fff',
   fontSize: '1rem',
   textDecoration: 'none',
-  marginBottom: '8px',
   transition: 'color 0.3s ease',
   '&:hover': {
-    color: '#f0a500',
+    color: 'brown',
   },
 };
 
@@ -28,7 +27,7 @@ const Footer = () => {
 <Box sx={{
   margin: 5,
   borderRadius: 10,
-  backgroundColor: 'rgb(47, 47, 47)',
+  backgroundColor: '#240844',
   padding: {
     xs: '40px 20px', // padding for extra small screens (mobile)
     sm: '60px 30px', // padding for small screens (tablet)
@@ -41,7 +40,7 @@ const Footer = () => {
 
       <footer>
         <Container maxWidth="lg" style={{ position: 'relative', zIndex: 1  }}>
-          <Grid container spacing={3} alignItems="center">
+          <Grid container spacing={1} alignItems="center">
             {/* Left Section (Logo and Social Icons) */}
             <Grid item xs={12} md={4} container spacing={3} direction="column" justifyContent="center" alignItems="center">
               <img src={logo} alt="Logo" style={{ width: '60%', height: 'auto',mb:5 }} />
@@ -99,7 +98,7 @@ const Footer = () => {
                 <Box component="ul" sx={{ listStyleType: 'none', padding: 0, margin: 0 }}>
                   <li><Link href="contact-us" sx={{ ...linkStyle, display: 'flex', alignItems: 'center' }}><Email sx={{ mr: 1 }} /> info@fundswalle.com</Link></li>
                   <li><Link href="contact-us" sx={{ ...linkStyle, display: 'flex', alignItems: 'center' }}><Phone sx={{ mr: 1 }} /> +91 91 7042334888</Link></li>
-                  <li><Link href="contact-us" sx={{ ...linkStyle, display: 'flex', alignItems: 'center' }}><LocationOn sx={{ mr: 1,mt:{xs:-5,md:-5} }} />1710, 17th Floor, World Trade Tower, Sector -16, Noida, Uttar Pradesh - 201301.</Link></li>
+                  <li><Link href="contact-us" sx={{ ...linkStyle, display: 'flex', alignItems: 'center' }}><LocationOn sx={{ mr: 1,mt:{xs:-5,md:-7} }} />1710, 17th Floor, World Trade Tower, Sector -16, Noida, Uttar Pradesh - 201301.</Link></li>
                 </Box>
               </Grid>
             </Grid>

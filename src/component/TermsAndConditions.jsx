@@ -127,7 +127,7 @@ const TermsAndConditions = () => {
             <Box 
                 sx={{ 
                     minHeight: '100vh',
-                    padding:{xs:2,md:'30px'} ,
+                    padding:{xs:2,md:3} ,
                     backgroundColor: '#f9f9f9',
                 }}
             >
@@ -160,8 +160,9 @@ const TermsAndConditions = () => {
                 </Box> */}
 
                 <Container maxWidth="lg">
-                    {/* Prominent Heading */}
+                    {/* Prominent Heading
                     <Box sx={{ textAlign: 'center', mt: 4 }}>
+                        
                         <Fade in={isVisible} timeout={1000}>
                             <Typography 
                                 variant="h3" 
@@ -178,10 +179,25 @@ const TermsAndConditions = () => {
                                 Terms And Conditions
                             </Typography>
                         </Fade>
-                    </Box>
+                    </Box> */}
 
                     {/* Policy Content */}
-                    <Paper elevation={3} sx={{ borderRadius: '30px', overflow: 'hidden' ,  backgroundColor: 'transparent',  padding:{xs:2,md:8}}}>
+                    <Paper elevation={3} sx={{ borderRadius: 5, overflow: 'hidden' ,  backgroundColor: 'transparent',  paddingX:{xs:2,md:3}}}>
+                    <Typography 
+                                variant="h3" 
+                                gutterBottom 
+                                sx={{  textAlign:'center',
+                                    color: 'black', 
+                                    fontWeight: 'bold', 
+                                    fontSize:{xs:'2rem',md:'3rem'}, 
+                                    letterSpacing: '0.05em',
+                                    transition: 'transform 0.3s ease-in-out',
+                                    '&:hover': { transform: 'scale(1.05)' }
+                                }}
+                            >
+                                Terms And Conditions
+                            </Typography>
+                       
                     {sections.map((section, sectionIndex) => (
                             <div key={sectionIndex}>
                                 <Box sx={{ transition: 'transform 0.3s ease-in-out', '&:hover': { transform: 'scale(1.05)' } }}>

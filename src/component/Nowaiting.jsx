@@ -73,13 +73,13 @@ const Nowaiting = () => {
             }}
           >
             <Typography
-              variant="h2"
+              variant="h4"
               color="black"
               mb={1}
               sx={{
-                mb: { xs: 0, md: 4},
+                mb: { xs: 0, md: 8},
                 marginLeft: { xs: 2, sm: 4 },
-                fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem' }, // Adjust font size based on screen size
+                // fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem' }, // Adjust font size based on screen size
                 lineHeight: { xs: '2rem', sm: '2.5rem', md: '3rem' },
               }}
             >

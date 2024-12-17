@@ -2,9 +2,9 @@ import React from 'react';
 import { Box, Typography, Grid } from '@mui/material';
 
 // Import images
-import leftImage from '../assets/image/image.png'; // Replace with your image path
-import centerImage from '../assets/image/image.png'; // Replace with your image path
-import rightImage from '../assets/image/image.png'; // Replace with your image path
+import leftImage from '../assets/image/1 (1).png'; // Replace with your image path
+import centerImage from '../assets/image/2 (1).png'; // Replace with your image path
+import rightImage from '../assets/image/3 (1).png'; // Replace with your image path
 
 const WhatPeopleSay = () => {
   return (
@@ -40,11 +40,12 @@ const WhatPeopleSay = () => {
               }}
             >
               <Typography variant="h5" color="black" mb={1}>
-              	Personalized Solutions     
+              Priya Shukla  
                </Typography>
               <Typography variant="body2" color="textSecondary">
-              We offer solutions as per the requirements of our customer.
-              </Typography>
+              I had a great experience with the loan disbursement process. The team was very
+professional and explained everything in detail. My loan was approved quickly,
+and the disbursement happened within 10 mins, as promised.              </Typography>
             </Box>
             <Box sx={{ mt: 2, flex: 1 }}>
               <img
@@ -76,7 +77,7 @@ const WhatPeopleSay = () => {
               alt="Center Content"
               style={{
                 width: '100%',
-                height: '80%', // Further increased image height
+                height: '73%', // Further increased image height
                 objectFit: 'cover',
               }}
             />
@@ -95,11 +96,12 @@ const WhatPeopleSay = () => {
               }}
             >
               <Typography variant="h5" color="inherit">
-              Prompt Money Transfer              
+                    Ravi Gaur          
               </Typography>
               <Typography variant="body2" color="inherit">
-              We transfer funds instantly in your account, all within 10 mins.
-               </Typography>
+              From applying for the loan to getting the funds in my account, I had an amazing
+experience! The entire process was very smooth. The staff was polite and guided
+me at each step of the procedure.               </Typography>
             </Box>
           </Box>
         </Grid>
@@ -127,11 +129,12 @@ const WhatPeopleSay = () => {
               }}
             >
               <Typography variant="h5" color="black" mb={1}>
-            	Full Transparency          
+            	Rohit Dandotiya       
                   </Typography>
               <Typography variant="body2" color="textSecondary">
-              We have no hidden charges and offer 100% transparency.
-                            </Typography>
+              It’s rare to come across such credible financial providers as the staff I found here.
+They were really understanding and transferred us the money we required
+immediately without making us go through any long processes.                            </Typography>
             </Box>
             <Box sx={{ mt: 2, flex: 1 ,borderRadius:10}}>
               <img
