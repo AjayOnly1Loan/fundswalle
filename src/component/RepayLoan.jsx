@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import WarningIcon from '@mui/icons-material/Warning'; // Import Warning icon
-import AXIS from '../assets/image/axis (1).png'; 
-import repayaImage from '../assets/image/Repay Now qua (1).webp';
+import AXIS from '../assets/image/YESBANK.NS_BIG.svg'; 
+import repayaImage from '../assets/image/Repay-Funds-wale.jpg';
 import { Grid, Box, Typography, Button, Divider } from '@mui/material';
 
 const RepayLoan = () => {
@@ -35,6 +35,8 @@ const RepayLoan = () => {
           src={repayaImage}
           alt="Repay Loan"
           sx={{
+            borderRadius: '20px',
+
             position: 'absolute',
             width: '100%',
             height: '100%',
@@ -89,7 +91,7 @@ const RepayLoan = () => {
         sx={{ 
           textAlign: 'center', 
           borderRadius: '30px',
-          padding: '16px',
+          padding:{xs:'5px',md:'16px'},
           maxWidth: '80vw',
           margin: '0 auto',
           mt:6,
@@ -200,9 +202,9 @@ const RepayLoan = () => {
             alt="AXIS Bank"
             style={{ width: '50px', marginBottom: '8px' }}
           />
-          <Typography variant="h6" sx={{ color: 'white' }}>
-            AXIS Bank
-          </Typography>
+          {/* <Typography variant="h6" sx={{ color: 'white' }}>
+            YES Bank
+          </Typography> */}
         </Box>
 
         {/* Vertical Divider */}
@@ -228,7 +230,7 @@ const RepayLoan = () => {
               Bank Name
             </Box>
             <Typography sx={{ marginLeft: { xs: 2, md: 3 } }}>
-              AXIS Bank Limited
+            Yes Bank Limited
             </Typography>
           </Typography>
 
@@ -246,7 +248,7 @@ const RepayLoan = () => {
               Name
             </Box>
             <Typography sx={{ marginLeft: { xs: 2, md: 3 } }}>
-              Naman Finlease Private Limited
+            Datta finance and trading private limited
             </Typography>
           </Typography>
 
@@ -264,8 +266,8 @@ const RepayLoan = () => {
               Account Number
             </Box>
             <Typography sx={{ marginLeft: { xs: 2, md: 3 } }}>
-              920020009314172
-            </Typography>
+            73681300000178
+              </Typography>
           </Typography>
 
           <Typography
@@ -282,7 +284,7 @@ const RepayLoan = () => {
               IFSC Code
             </Box>
             <Typography sx={{ marginLeft: { xs: 2, md: 3 } }}>
-              UTIB0000160
+            YESB0000736
             </Typography>
           </Typography>
 
@@ -300,8 +302,7 @@ const RepayLoan = () => {
               Branch Name
             </Box>
             <Typography sx={{ marginLeft: { xs: 2, md: 3 } }}>
-              Saket, New Delhi 110017, India
-            </Typography>
+            Noida-Sector 18 Branch, Sector18-201301            </Typography>
           </Typography>
 
           <Typography

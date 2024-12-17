@@ -32,7 +32,7 @@ const Footer = () => {
   padding: {
     xs: '40px 20px', // padding for extra small screens (mobile)
     sm: '60px 30px', // padding for small screens (tablet)
-    md: '80px 30px', // padding for medium and larger screens (desktop)
+    md: '80px 5px', // padding for medium and larger screens (desktop)
   },
   color: '#fff',
   position: 'relative',
@@ -97,9 +97,9 @@ const Footer = () => {
               <Grid item xs={12} sm={4} sx={{ paddingTop: '12px' }}>
                 <Typography variant="h6" sx={{ color: '#fff', fontWeight: 500, mb: 2 }}>Contact Us</Typography>
                 <Box component="ul" sx={{ listStyleType: 'none', padding: 0, margin: 0 }}>
-                  <li><Link href="contact-us" sx={{ ...linkStyle, display: 'flex', alignItems: 'center' }}><Email sx={{ mr: 1 }} /> info@qualoan.com</Link></li>
-                  <li><Link href="contact-us" sx={{ ...linkStyle, display: 'flex', alignItems: 'center' }}><Phone sx={{ mr: 1 }} /> +91 9999999341</Link></li>
-                  <li><Link href="contact-us" sx={{ ...linkStyle, display: 'flex', alignItems: 'center' }}><LocationOn sx={{ mr: 1,mt:{xs:-5,md:-5} }} />229, 2nd Floor, Vipul Agora Mall, MG Road, Gurugram, Haryana - 122001</Link></li>
+                  <li><Link href="contact-us" sx={{ ...linkStyle, display: 'flex', alignItems: 'center' }}><Email sx={{ mr: 1 }} /> info@fundswalle.com</Link></li>
+                  <li><Link href="contact-us" sx={{ ...linkStyle, display: 'flex', alignItems: 'center' }}><Phone sx={{ mr: 1 }} /> +91 91 7042334888</Link></li>
+                  <li><Link href="contact-us" sx={{ ...linkStyle, display: 'flex', alignItems: 'center' }}><LocationOn sx={{ mr: 1,mt:{xs:-5,md:-5} }} />1710, 17th Floor, World Trade Tower, Sector -16, Noida, Uttar Pradesh - 201301.</Link></li>
                 </Box>
               </Grid>
             </Grid>
@@ -114,7 +114,7 @@ const Footer = () => {
           boxShadow: '0 -3px 10px rgba(0, 0, 0, 0.3)',
         }}>
           <Typography variant="body2" style={{ color: '#fff', textShadow: '1px 1px 2px rgba(0, 0, 0, 0.7)' }}>
-            Copyright &copy; 2024 QUA Loan. All Rights Reserved.
+            Copyright &copy; 2024 fundswalle. All Rights Reserved.
           </Typography>
         </Box>
       </footer>

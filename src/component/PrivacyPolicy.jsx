@@ -13,7 +13,12 @@ const PrivacyPolicy = () => {
             title: "1. Information We Collect",
             content: [
                 "We collect the following types of information:",
-                "• Personal Identification: Full Name, Email, Phone Number, Date of Birth, Address, PAN, Aadhaar, Employment Information, Bank Account Details, and Financial Data.",
+                "• Personal Identification: Full Name, Email, Phone Number, Date of Birth, Address, PAN, Aadhaar, Employment Information,", 
+                { 
+                    text: "Bank Account Details, and Financial Data.", 
+                    align: "left", // Define alignment for this specific line 
+                    indent: true // Add a flag for indentation if needed 
+                },
                 "• Financial Information: Documents such as Bank Statements, Salary Slips, and Consent for Credit Checks are required for loan applications.",
                 "• Transactional Information: Details about your loans, repayment schedules, and transaction history is recorded."
             ]
@@ -32,7 +37,12 @@ const PrivacyPolicy = () => {
             title: "3. Sharing Your Information",
             content: [
                 "Your information may be shared with:",
-                "• Authorized Third Parties: We work with Credit Bureaus, Payment Gateways, and Verification Agencies to process and verify your information.",
+                "• Authorized Third Parties: We work with Credit Bureaus, Payment Gateways, and Verification Agencies to process and verify ",
+                {text:"your information.",
+                 align:"left",
+                 indent:'true'  
+
+                },
                 "• Legal Authorities: We may disclose your information as required by the law, such as for regulatory reporting or fraud investigations.",
                 "• Parent Company: We may share your data with our parent company, Datta Finance and Trading Private Limited, for loan processing."
             ]
@@ -84,8 +94,8 @@ const PrivacyPolicy = () => {
             content: [
                 "If you have any questions, please contact us at:",
                 "• Email: info@fundswalle.com",
-                "• Phone: +91 9220535528",
-                "• Address: 1710, 17th Floor, World Trade Tower, Sector-16, Noida, Uttar Pradesh - 201301"
+                "• Phone: +91 91 7042334888",
+                "• Address: 1710, 17th Floor, World Trade Tower, Sector -16, Noida, Uttar Pradesh - 201301."
             ]
         }
     ];
@@ -177,11 +187,36 @@ const PrivacyPolicy = () => {
                                             {section.title}
                                         </Typography>
                                     </Fade>
-                                    {section.content.map((line, lineIndex) => (
-                                        <Fade in={isVisible} timeout={1200 + sectionIndex * 500 + lineIndex * 500} key={lineIndex}>
-                                            <Typography>{line}</Typography>
-                                        </Fade>
-                                    ))}
+                                    {section.content.map((line, lineIndex) => {
+                            if (typeof line === "string") {
+                                return (
+                                    <Fade in={isVisible} timeout={1200 + sectionIndex * 500 + lineIndex * 500} key={lineIndex}>
+                                        <Typography 
+                                            sx={{ 
+                                                textAlign: "justify", // Default alignment for regular strings
+                                                ml: 0 
+                                            }}
+                                        >
+                                            {line}
+                                        </Typography>
+                                    </Fade>
+                                );
+                            } else if (typeof line === "object") {
+                                return (
+                                    <Fade in={isVisible} timeout={1200 + sectionIndex * 500 + lineIndex * 500} key={lineIndex}>
+                                        <Typography 
+                                            sx={{ 
+                                                textAlign: line.align || "justify", // Use specified alignment
+                                                ml: line.indent ? 1 : 0 // Indent if specified
+                                            }}
+                                        >
+                                            {line.text}
+                                        </Typography>
+                                    </Fade>
+                                );
+                            }
+                        })}
+
                                 </Box>
                                 <Divider sx={{ my: 2 }} />
                             </div>

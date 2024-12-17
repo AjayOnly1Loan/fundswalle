@@ -66,7 +66,7 @@ const AboutUs = () => {
       >
         Mobile
       </Typography>
-      <Typography sx={{ mb: 1 }}>+91 9220535528</Typography>
+      <Typography sx={{ mb: 1 }}>+91 7042334888</Typography>
     </Grid>
     <Grid item xs={12} sm={6}>
       <Typography
@@ -84,7 +84,7 @@ const AboutUs = () => {
     <Grid item xs={12}>
       <Typography
         sx={{
-          mt:12,
+          mt:{xs:5,md:12},
           fontSize: '1.5rem',
           mb: 1,
         }}
@@ -107,23 +107,14 @@ const AboutUs = () => {
             component="form"
             onSubmit={handleSubmit}
             sx={{
+              marginTop:6,
               background: 'rgba(255, 255, 255, 0.9)',
-              padding: 8,
+              padding: 6,
               borderRadius: 7,
               boxShadow: '0px 6px 15px rgba(0, 0, 0, 0.15)',
             }}
           >
-            <Typography
-              variant="h5"
-              sx={{
-                fontWeight: 'bold',
-                mb: 3,
-                textAlign: 'center',
-                color: '#333',
-              }}
-            >
-              Get in Touch
-            </Typography>
+           
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
                 <TextField
@@ -228,7 +219,7 @@ const AboutUs = () => {
       >
         <Box
           component="iframe"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.357975184487!2d77.07157531508!3d28.481119982466515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19c8019f5d07%3A0x605afbc6573e6d6c!2sVipul%20Agora%20Mall%2C%20MG%20Road%2C%20Gurugram%2C%20Haryana%20122001!5e0!3m2!1sen!2sin!4v1697209452257!5m2!1sen!2sin"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3435.012190060276!2d77.36625474937759!3d28.570626083222425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5a57f3f6f1f%3A0xa1c0ad1211f34090!2sWorld%20Trade%20Tower%2C%20Sector%2016%2C%20Noida%2C%20Uttar%20Pradesh%20201301!5e0!3m2!1sen!2sus!4v1614693744843"
           allowFullScreen
           loading="lazy"
           sx={{

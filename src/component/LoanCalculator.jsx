@@ -77,11 +77,11 @@ const LoanCalculator = () => {
                 backgroundPosition: 'center',
                 background: '#f9f9f9', 
 
-                paddingY:{xs:1,md:4} , // Adds vertical padding
+                paddingY:{xs:1,md:1} , // Adds vertical padding
               
             }}
         >
-            <Box sx={{ marginTop: 4, marginBottom: 4 }}>
+            <Box sx={{  marginBottom:{xs:2,md:7} }}>
                 <Container>
                                        <Grid 
                             container 
@@ -108,7 +108,8 @@ const LoanCalculator = () => {
                                 }}
                                 ref={calculatorRef}
                             >
-<Box sx={{ width: { xs: '100%', sm: '50%' }, padding: { xs: 3, sm: 5 } }}>
+                           <Box sx={{ width: { xs: '100%', sm: '50%' }, padding: { xs: 3, sm: 5 } }}>
+    {/* Loan Amount */}
     <Grid container alignItems="center" justifyContent="space-between">
         <Grid item xs={12} sm={6}>
             <Typography variant="h6" sx={{ marginBottom: 1, textAlign: 'left' }}>
@@ -121,14 +122,12 @@ const LoanCalculator = () => {
                 value={loanAmount || ''}
                 onChange={(e) => {
                     const value = Number(e.target.value);
-                    if (value <= 100000) {
+                    if (value >= 5000 && value <= 100000) {
                         setLoanAmount(value);
                     } else if (value > 100000) {
                         setLoanAmount(100000);
-                    } else if (value < 5000) {
-                        setLoanAmount(5000);
                     } else {
-                        setLoanAmount(value);
+                        setLoanAmount(5000);
                     }
                 }}
                 variant="outlined"
@@ -137,8 +136,7 @@ const LoanCalculator = () => {
                     marginBottom: 2,
                     background: 'transparent',
                     borderRadius: '16px',
-                    width: '100%',
-                    maxWidth: 200, // Reduced width to make the input smaller
+                    width: { xs: '100%', sm: '100%', md: 200 },
                     '& .MuiOutlinedInput-root': {
                         borderRadius: '16px',
                     },
@@ -173,10 +171,11 @@ const LoanCalculator = () => {
         }}
     />
 
+    {/* Loan Tenure */}
     <Grid container alignItems="center" justifyContent="space-between">
         <Grid item xs={12} sm={6}>
             <Typography variant="h6" sx={{ marginBottom: 1, textAlign: 'left' }}>
-                Loan Tenure (Months)
+                Loan Tenure (days)
             </Typography>
         </Grid>
         <Grid item xs={12} sm={6}>
@@ -185,14 +184,12 @@ const LoanCalculator = () => {
                 value={loanTenure || ''}
                 onChange={(e) => {
                     const value = Number(e.target.value);
-                    if (value <= 90) {
+                    if (value >= 1 && value <= 90) {
                         setLoanTenure(value);
-                    } else if (value < 1) {
-                        setLoanTenure(1);
                     } else if (value > 90) {
-                        setLoanAmount(90);
+                        setLoanTenure(90);
                     } else {
-                        setLoanTenure(value);
+                        setLoanTenure(1);
                     }
                 }}
                 variant="outlined"
@@ -201,8 +198,7 @@ const LoanCalculator = () => {
                     marginBottom: 2,
                     background: 'transparent',
                     borderRadius: '16px',
-                    width: '100%',
-                    maxWidth: 200, // Reduced width to make the input smaller
+                    width: { xs: '100%', sm: '100%', md: 200 },
                     '& .MuiOutlinedInput-root': {
                         borderRadius: '16px',
                     },
@@ -221,7 +217,7 @@ const LoanCalculator = () => {
         value={loanTenure}
         min={1}
         max={90}
-        onChange={handleLoanTenureChange}
+        onChange={(_, newValue) => setLoanTenure(newValue)}
         valueLabelDisplay="auto"
         marks={[{ value: 1, label: '1 day' }, { value: 90, label: '90 days' }]}
         sx={{
@@ -237,54 +233,54 @@ const LoanCalculator = () => {
         }}
     />
 
-<Grid container alignItems="center" justifyContent="space-between">
-    <Grid item xs={12} sm={6}>
-        <Typography variant="h6" sx={{ marginBottom: 1, textAlign: 'left' }}>
-            Interest Rate (%)
-        </Typography>
-    </Grid>
-    <Grid item xs={12} sm={6}>
-        <TextField
-            type="number"
-            value={interestRate || ''}
-            onChange={(e) => {
-                const value = Number(e.target.value);
-                if (value <= 2.75) {
-                    setInterestRate(value);
-                } else if (value < 0.5) {
-                    setInterestRate(0.5);
-                } else if (value > 2.75) {
-                    setInterestRate(2.75);
-                }
-            }}
-            variant="outlined"
-            fullWidth
-            sx={{
-                marginBottom: 2,
-                background: 'transparent',
-                borderRadius: '16px',
-                width: '100%',
-                maxWidth: 200, // Reduced width to make the input smaller
-                '& .MuiOutlinedInput-root': {
+    {/* Interest Rate */}
+    <Grid container alignItems="center" justifyContent="space-between">
+        <Grid item xs={12} sm={6}>
+            <Typography variant="h6" sx={{ marginBottom: 1, textAlign: 'left' }}>
+                Interest Rate (%)
+            </Typography>
+        </Grid>
+        <Grid item xs={12} sm={6}>
+            <TextField
+                type="number"
+                value={interestRate || ''}
+                onChange={(e) => {
+                    const value = Number(e.target.value);
+                    if (value >= 0.5 && value <= 2.75) {
+                        setInterestRate(value);
+                    } else if (value > 2.75) {
+                        setInterestRate(2.75);
+                    } else {
+                        setInterestRate(0.5);
+                    }
+                }}
+                variant="outlined"
+                fullWidth
+                sx={{
+                    marginBottom: 2,
+                    background: 'transparent',
                     borderRadius: '16px',
-                },
-                '& .MuiOutlinedInput-notchedOutline': {
-                    borderColor: 'rgba(0, 0, 0, 0.23)',
-                },
-                '&:hover .MuiOutlinedInput-notchedOutline': {
-                    borderColor: '#1976d2',
-                },
-            }}
-        />
+                    width: { xs: '100%', sm: '100%', md: 200 },
+                    '& .MuiOutlinedInput-root': {
+                        borderRadius: '16px',
+                    },
+                    '& .MuiOutlinedInput-notchedOutline': {
+                        borderColor: 'rgba(0, 0, 0, 0.23)',
+                    },
+                    '&:hover .MuiOutlinedInput-notchedOutline': {
+                        borderColor: '#1976d2',
+                    },
+                }}
+            />
+        </Grid>
     </Grid>
-</Grid>
 
     <Slider
         value={interestRate}
         min={0.5}
         max={2.75}
         step={0.1}
-        onChange={handleInterestRateChange}
+        onChange={(_, newValue) => setInterestRate(newValue)}
         valueLabelDisplay="auto"
         marks={[{ value: 0.5, label: '0.5%' }, { value: 2.75, label: '2.75%' }]}
         sx={{
@@ -299,14 +295,11 @@ const LoanCalculator = () => {
             },
         }}
     />
-   
-
-    
 </Box>
 
 
 
-                             <Box sx={{ width: { xs: '100%', sm: '80%', md: '50%' }, borderLeft: '2px solid #000', padding: { xs: 2, sm: 4, md: 5 } }}>
+                             <Box sx={{ width: { xs: '100%', sm: '80%', md: '50%' }, borderLeft:{xs:'none',md:'2px solid #000'}, padding: { xs: 2, sm: 4, md: 5 } }}>
                             
                             
                             <Typography variant="h5">
@@ -366,7 +359,7 @@ const LoanCalculator = () => {
                                                 }}
                                             >
                                                 <Typography variant="subtitle1">Loan Tenure:</Typography>
-                                                <Typography variant="h6">{loanTenure} month</Typography>
+                                                <Typography variant="h6">{loanTenure} days</Typography>
                                             </TableCell>
                                         </TableRow>
                                     </TableBody>

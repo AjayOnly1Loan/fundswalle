@@ -206,10 +206,10 @@ const ApplyNow = () => {
 
 
   return (
-    <div style={{            backgroundColor: '#f9f9f9'}}>
+    <div style={{  backgroundColor: '#f9f9f9'}}>
       
-          <form style={{            backgroundColor: '#f9f9f9'}}>
-          <Container maxWidth="xl" sx={{padding: 7 ,}}>
+          <form style={{ backgroundColor: '#f9f9f9'}}>
+          <Container maxWidth="xl" sx={{padding:{xs:1,md:3} }}>
         <Box
           component="form"
           id="loanForm"
@@ -219,14 +219,14 @@ const ApplyNow = () => {
             flexDirection: 'column',
             gap: 3,
             padding: 4,
-            backgroundColor: '#f9f9f9',
-            borderRadius: 20,
-            border: '2px solid gray',
+            background: '  #ABC8CB',
+            borderRadius: 7,
+            // border: '2px solid gray',
             boxShadow: 3,
             width: '100%',
           }}
         >
-          <Typography variant="h5" gutterBottom sx={{textAlign:'center'}}>
+          <Typography variant="h4" gutterBottom sx={{textAlign:'center'}}>
             Personal Information
           </Typography>
         <Grid container spacing={3} sx={{fontFamily:'cursive'}}>
@@ -297,14 +297,11 @@ const ApplyNow = () => {
             InputProps={{
               startAdornment: (
                 <InputAdornment position="start">
-                  <PinDrop sx={{ color: '#1976d2' }} />
+                  <PinDrop sx={{ color: 'rgba(0, 0, 0, 0.6)' }} />
                 </InputAdornment>
               ),
             }}
-            sx={{
-              backgroundColor: '#f0f4ff',
-              borderRadius: '4px',
-            }}
+           
           />
         </Grid>
         <Grid
@@ -355,14 +352,11 @@ const ApplyNow = () => {
               InputProps={{
                 startAdornment: (
                   <InputAdornment position="start">
-                    <LocationOn sx={{ color: '#1976d2' }} />
+                    <LocationOn sx={{ color: 'rgba(0, 0, 0, 0.6)' }} />
                   </InputAdornment>
                 ),
               }}
-              sx={{
-                backgroundColor: '#f0f4ff',
-                borderRadius: '4px',
-              }}
+              
             >
               
             </TextField>

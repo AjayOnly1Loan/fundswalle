@@ -14,8 +14,7 @@ const WhatPeopleSay = () => {
         What People Say
       </Typography>
       <Typography variant="h5" color="textSecondary" mb={4} sx={{paddingX: { xs: 2, sm: 12 }}}>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-      </Typography>
+      Real stories, real trust, real transformation - all come with real results - Fundswalle became a game-changer for their financial journeys.      </Typography>
 
       <Grid container spacing={3} justifyContent="center" alignItems="stretch">
         {/* Left Side */}
@@ -41,10 +40,10 @@ const WhatPeopleSay = () => {
               }}
             >
               <Typography variant="h5" color="black" mb={1}>
-                Lorem Ipsum
-              </Typography>
+              	Personalized Solutions     
+               </Typography>
               <Typography variant="body2" color="textSecondary">
-                Lorem Ipsum is simply dummy text of the printing and typesetting.
+              We offer solutions as per the requirements of our customer.
               </Typography>
             </Box>
             <Box sx={{ mt: 2, flex: 1 }}>
@@ -96,11 +95,11 @@ const WhatPeopleSay = () => {
               }}
             >
               <Typography variant="h5" color="inherit">
-                Lorem Ipsum
+              Prompt Money Transfer              
               </Typography>
               <Typography variant="body2" color="inherit">
-                Lorem Ipsum is simply dummy text of the printing and typesetting.
-              </Typography>
+              We transfer funds instantly in your account, all within 10 mins.
+               </Typography>
             </Box>
           </Box>
         </Grid>
@@ -128,11 +127,11 @@ const WhatPeopleSay = () => {
               }}
             >
               <Typography variant="h5" color="black" mb={1}>
-                Lorem Ipsum
-              </Typography>
+            	Full Transparency          
+                  </Typography>
               <Typography variant="body2" color="textSecondary">
-                Lorem Ipsum is simply dummy text of the printing and typesetting.
-              </Typography>
+              We have no hidden charges and offer 100% transparency.
+                            </Typography>
             </Box>
             <Box sx={{ mt: 2, flex: 1 ,borderRadius:10}}>
               <img

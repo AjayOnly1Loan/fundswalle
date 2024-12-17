@@ -26,6 +26,7 @@ const FAQs = () => {
     return (
 <Box
     sx={{
+        paddingTop:3,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -50,7 +51,7 @@ const FAQs = () => {
                         textAlign: 'center',
                         fontWeight: 'bold',
                         color: 'black',
-                        mb: 4,
+                        mb: 3,
                         fontSize:{xs:'2rem',md:'3rem'} ,
                         padding: '0.5rem',
                         borderRadius: '8px',

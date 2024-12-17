@@ -41,7 +41,7 @@ const TermsAndConditions = () => {
         {
             title: "5. Fees and Charges",
             content: [
-                "Applicable fees may include a processing fee, late payment charges, prepayment penalties, and other fees as outlined in the loan agreement."
+                "Applicable fees may include a processing fee, late payment charges and other fees as outlined in the loan agreement."
             ]
         },
         {
@@ -53,7 +53,7 @@ const TermsAndConditions = () => {
         {
             title: "7. Loan Repayment",
             content: [
-                "Repayment must be made as per the terms set forth in your loan agreement. Loan repayments will be deducted automatically via NACH mandate or through other digital methods such as UPI, Payment Gateway, etc. Early repayment is allowed, however, prepayment penalties may apply."
+                "Repayment must be made as per the terms set forth in your loan agreement. Loan repayments will be deducted automatically via NACH mandate or through other digital methods such as UPI, Payment Gateway, etc. Early repayment is allowed and no prepayment penalties."
             ]
         },
         {

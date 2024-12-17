@@ -35,6 +35,9 @@ const Eligibility = () => {
               alt="Eligibility Criteria 1"
               style={{ width: '120px', height: '120px', marginBottom: '30px' }} // Larger image
             />
+            
+            <Typography variant='h4' >Credit Score</Typography>
+            <br />
             <Typography variant="h5" color="textSecondary">
               Those who don’t have a good credit score.
             </Typography>
@@ -60,6 +63,8 @@ const Eligibility = () => {
               alt="Eligibility Criteria 2"
               style={{ width: '120px', height: '120px', marginBottom: '30px' }} // Larger image
             />
+            <Typography variant='h4' >Secured Loan</Typography>
+            <br />
             <Typography variant="h5" color="textSecondary">
               Those who weren’t able to get a secured loan.
             </Typography>
@@ -85,6 +90,8 @@ const Eligibility = () => {
               alt="Eligibility Criteria 3"
               style={{ width: '120px', height: '120px', marginBottom: '30px' }} // Larger image
             />
+            <Typography variant='h4' >Personal Loans</Typography>
+            <br />
             <Typography variant="h5" color="textSecondary">
               Those who have no other resources to avail personal loans.
             </Typography>

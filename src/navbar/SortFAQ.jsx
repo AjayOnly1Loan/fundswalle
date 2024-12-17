@@ -194,7 +194,7 @@ const faqItems = [
     },
     {
         question: 'How do I apply for a loan on Fundswalle?',
-        answer: 'Applying for a loan is easier than you may think. Fill the form on our website www.fundswalle along with the set of required documents, and get it instantly approved.'
+        answer: 'Applying for a loan is easier than you may think. Fill the form on our website www.fundswalle.com along with the set of required documents, and get it instantly approved.'
     },
     {
         question: 'What documents do I need to apply for a loan?',

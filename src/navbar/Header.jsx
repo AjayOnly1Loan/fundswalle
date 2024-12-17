@@ -131,147 +131,147 @@ const Header = () => {
           </MUI_Menu>
 
           {/* Desktop Navigation */}
+                    <Box
+            sx={{
+              display: { xs: 'none', md: 'flex' },
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              width: '100%',
+              textAlign: 'center',
+            }}
+          >
           <Box
-  sx={{
-    display: { xs: 'none', md: 'flex' },
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    width: '100%',
-    textAlign: 'center',
-  }}
->
-<Box
-  sx={{
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    gap: '1rem',
-    flexGrow: 1, // To allow centering
-  }}
->
-  <Link
-    to="/"
-    onClick={scrollToTop}
-    style={{
-      color: '#0b2747',
-      display: 'flex',
-      alignItems: 'center',
-      textDecoration: 'none',
-      padding: '8px',
-      fontWeight: '700',
-      fontFamily: 'Roboto, sans-serif',
-      transition: 'color 0.3s ease',
-    }}
-    onMouseEnter={(e) => (e.currentTarget.style.color = 'orange')}
-    onMouseLeave={(e) => (e.currentTarget.style.color = '#0b2747')}
-  >
-    <HomeIcon sx={{ mr: 1 }} /> Home
-  </Link>
+            sx={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              gap: '1rem',
+              flexGrow: 1, // To allow centering
+            }}
+          >
+            <Link
+              to="/"
+              onClick={scrollToTop}
+              style={{
+                color: '#0b2747',
+                display: 'flex',
+                alignItems: 'center',
+                textDecoration: 'none',
+                padding: '8px',
+                fontWeight: '700',
+                fontFamily: 'Roboto, sans-serif',
+                transition: 'color 0.3s ease',
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = 'orange')}
+              onMouseLeave={(e) => (e.currentTarget.style.color = '#0b2747')}
+            >
+              <HomeIcon sx={{ mr: 1 }} /> Home
+            </Link>
 
-  <Link
-    to="/about-us"
-    onClick={scrollToTop}
-    style={{
-      color: '#0b2747',
-      display: 'flex',
-      alignItems: 'center',
-      textDecoration: 'none',
-      padding: '8px',
-      fontWeight: '700',
-      fontFamily: 'Roboto, sans-serif',
-      transition: 'color 0.3s ease',
-    }}
-    onMouseEnter={(e) => (e.currentTarget.style.color = 'orange')}
-    onMouseLeave={(e) => (e.currentTarget.style.color = '#0b2747')}
-  >
-    <InfoIcon sx={{ mr: 1 }} /> About Us
-  </Link>
+            <Link
+              to="/about-us"
+              onClick={scrollToTop}
+              style={{
+                color: '#0b2747',
+                display: 'flex',
+                alignItems: 'center',
+                textDecoration: 'none',
+                padding: '8px',
+                fontWeight: '700',
+                fontFamily: 'Roboto, sans-serif',
+                transition: 'color 0.3s ease',
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = 'orange')}
+              onMouseLeave={(e) => (e.currentTarget.style.color = '#0b2747')}
+            >
+              <InfoIcon sx={{ mr: 1 }} /> About Us
+            </Link>
 
-  <Link
-    to="/contact-us"
-    onClick={scrollToTop}
-    style={{
-      color: '#0b2747',
-      display: 'flex',
-      alignItems: 'center',
-      textDecoration: 'none',
-      padding: '8px',
-      fontWeight: '700',
-      fontFamily: 'Roboto, sans-serif',
-      transition: 'color 0.3s ease',
-    }}
-    onMouseEnter={(e) => (e.currentTarget.style.color = 'orange')}
-    onMouseLeave={(e) => (e.currentTarget.style.color = '#0b2747')}
-  >
-    <ContactPageIcon sx={{ mr: 1 }} /> Contact Us
-  </Link>
+            <Link
+              to="/contact-us"
+              onClick={scrollToTop}
+              style={{
+                color: '#0b2747',
+                display: 'flex',
+                alignItems: 'center',
+                textDecoration: 'none',
+                padding: '8px',
+                fontWeight: '700',
+                fontFamily: 'Roboto, sans-serif',
+                transition: 'color 0.3s ease',
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = 'orange')}
+              onMouseLeave={(e) => (e.currentTarget.style.color = '#0b2747')}
+            >
+              <ContactPageIcon sx={{ mr: 1 }} /> Contact Us
+            </Link>
 
-  <Link
-    to="/repay-now"
-    onClick={scrollToTop}
-    style={{
-      color: '#0b2747',
-      display: 'flex',
-      alignItems: 'center',
-      textDecoration: 'none',
-      padding: '8px',
-      fontWeight: '700',
-      fontFamily: 'Roboto, sans-serif',
-      transition: 'color 0.3s ease',
-    }}
-    onMouseEnter={(e) => (e.currentTarget.style.color = 'orange')}
-    onMouseLeave={(e) => (e.currentTarget.style.color = '#0b2747')}
-  >
-    <ApplyNowIcon sx={{ mr: 1 }} /> Repay Now
-  </Link>
+            <Link
+              to="/repay-now"
+              onClick={scrollToTop}
+              style={{
+                color: '#0b2747',
+                display: 'flex',
+                alignItems: 'center',
+                textDecoration: 'none',
+                padding: '8px',
+                fontWeight: '700',
+                fontFamily: 'Roboto, sans-serif',
+                transition: 'color 0.3s ease',
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = 'orange')}
+              onMouseLeave={(e) => (e.currentTarget.style.color = '#0b2747')}
+            >
+              <ApplyNowIcon sx={{ mr: 1 }} /> Repay Now
+            </Link>
 
-  <Link
-    to="/calculator"
-    onClick={scrollToTop}
-    style={{
-      color: '#0b2747',
-      display: 'flex',
-      alignItems: 'center',
-      textDecoration: 'none',
-      padding: '8px',
-      fontWeight: '700',
-      fontFamily: 'Roboto, sans-serif',
-      transition: 'color 0.3s ease',
-    }}
-    onMouseEnter={(e) => (e.currentTarget.style.color = 'orange')}
-    onMouseLeave={(e) => (e.currentTarget.style.color = '#0b2747')}
-  >
-    <CalculateIcon sx={{ mr: 1 }} /> Loan Calculator
-  </Link>
-</Box>
+            <Link
+              to="/calculator"
+              onClick={scrollToTop}
+              style={{
+                color: '#0b2747',
+                display: 'flex',
+                alignItems: 'center',
+                textDecoration: 'none',
+                padding: '8px',
+                fontWeight: '700',
+                fontFamily: 'Roboto, sans-serif',
+                transition: 'color 0.3s ease',
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = 'orange')}
+              onMouseLeave={(e) => (e.currentTarget.style.color = '#0b2747')}
+            >
+              <CalculateIcon sx={{ mr: 1 }} /> Loan Calculator
+            </Link>
+          </Box>
 
 
-  {/* "Apply Now" Button */}
-  <Button
-    component={Link}
-    to="/apply-now"
-    variant="contained"
-    sx={{
-      backgroundColor: 'orange',
-      color: 'white',
-      padding: '10px 20px',
-      borderRadius: '50px',
-      fontWeight: 'bold',
-      animation: `${blinking} 1.5s infinite`,
-      fontFamily: 'Roboto, sans-serif',
-      textTransform: 'none', // Normal case
-      '&:hover': {
-        backgroundColor: '#fc8403',
-      },
-      '@media (max-width: 600px)': {
-        fontSize: '14px',
-        padding: '8px 12px',
-      },
-    }}
-  >
-    Apply Now
-  </Button>
-</Box>
+            {/* "Apply Now" Button */}
+            <Button
+              component={Link}
+              to="/apply-now"
+              variant="contained"
+              sx={{
+                backgroundColor: 'orange',
+                color: 'white',
+                padding: '10px 20px',
+                borderRadius: '50px',
+                fontWeight: 'bold',
+                animation: `${blinking} 1.5s infinite`,
+                fontFamily: 'Roboto, sans-serif',
+                textTransform: 'none', // Normal case
+                '&:hover': {
+                  backgroundColor: '#fc8403',
+                },
+                '@media (max-width: 600px)': {
+                  fontSize: '14px',
+                  padding: '8px 12px',
+                },
+              }}
+            >
+              Apply Now
+            </Button>
+          </Box>
 
         </Toolbar>
       </AppBar>
