@@ -73,7 +73,7 @@ const Header = () => {
               src={logo}
               alt="Logo"
               style={{
-                borderRadius:7,
+                borderRadius:15,
                 width: '40%',
                 height:{xs:'20%',md:'40%'} ,
                 objectFit: 'contain',
