@@ -123,26 +123,27 @@ const FrontPage = () => {
         </Box>
 
        
-              <Box
-        sx={{
-          display: 'flex', // Flexbox to align content
-          justifyContent: 'center', // Center horizontally
-          alignItems: 'center', // Center vertically
-          width: 'auto', // Allow width to adjust to the image size
-          height: 'auto', // Allow height to adjust to the image size
-        }}
-      >
         <Box
-          component="img"
-          src={image1}
-          alt="Customer 1"
-          sx={{
-            width: "auto", // Automatically adjust width based on the image's original size
-            height: "auto", // Automatically adjust height based on the image's original size
-            objectFit: "contain", // Ensure the image fits inside the circle without cropping
-          }}
-        />
-      </Box>
+  sx={{
+    display: 'flex', // Flexbox to align content
+    justifyContent: 'center', // Center horizontally
+    alignItems: 'center', // Center vertically
+    width: 'auto', // Allow width to adjust to the image size
+    height: 'auto', // Allow height to adjust to the image size
+  }}
+>
+  <Box
+    component="img"
+    src={image1}
+    alt="Customer 1"
+    sx={{
+      width: "50%",  // Adjust width to 80% of the container or specify a fixed width
+      height: "auto", // Adjust height automatically to maintain aspect ratio
+      objectFit: "contain", // Ensure the image fits inside the box without cropping
+    }}
+  />
+</Box>
+
 
          
           
@@ -150,7 +151,7 @@ const FrontPage = () => {
         <Typography
           sx={{
             textAlign: "center",
-            fontSize: "1.25rem",
+            fontSize: "1rem",
             color: "black",
             fontWeight: "bold",
             mt: theme.spacing(1),
