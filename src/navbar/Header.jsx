@@ -120,7 +120,7 @@ const Header = () => {
               </Link>
             </MenuItem>
             <MenuItem onClick={handleClose}>
-              <Link to="/loan-calculator" onClick={scrollToTop} style={{ color: '#0b2747', display: 'flex', alignItems: 'center' }}>
+              <Link to="/calculator" onClick={scrollToTop} style={{ color: '#0b2747', display: 'flex', alignItems: 'center' }}>
                 <CalculateIcon sx={{ mr: 1 }} /> Loan Calculator
               </Link>
             </MenuItem>
