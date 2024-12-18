@@ -22,84 +22,85 @@ const WhatPeopleSay = () => {
       {isSmallScreen ? (
         // Layout for Small Screen
         <Grid container spacing={3} justifyContent="center" alignItems="stretch">
-          {/* Left Side for Small Screen */}
-          <Grid item xs={12}>
-            <Box sx={{ p: 2 }}>
-              <img
-                src={leftImage}
-                alt="Left Content"
-                style={{
-                  width: '100%',
-                  height: '200px', // Fixed height for image
-                  borderRadius: 10,
-                  objectFit: 'cover',
-                }}
-              />
-              <Box sx={{ background: '#EFD3D3', padding: 4, borderRadius: 4, height: '200px',marginTop:2 }}>
-                <Typography variant="h6" color="black" mb={1}>
-                  Priya Shukla
-                </Typography>
-                <Typography variant="body2" color="textSecondary">
-                  I had a great experience with the loan disbursement process. The team was very
-                  professional and explained everything in detail. My loan was approved quickly,
-                  and the disbursement happened within 10 mins, as promised.
-                </Typography>
-              </Box>
+        {/* Left Side for Small Screen */}
+        <Grid item xs={12}>
+          <Box sx={{ p: 2 }}>
+            <img
+              src={leftImage}
+              alt="Left Content"
+              style={{
+                width: '100%',
+                height: '200px', // Fixed height for image
+                borderRadius: 10,
+                objectFit: 'cover',
+              }}
+            />
+            <Box sx={{ background: '#EFD3D3', padding: 4, borderRadius: 4, marginTop: 2, height: 'auto' }}>
+              <Typography variant="h6" color="black" mb={1}>
+                Priya Shukla
+              </Typography>
+              <Typography variant="body2" color="textSecondary">
+                I had a great experience with the loan disbursement process. The team was very
+                professional and explained everything in detail. My loan was approved quickly,
+                and the disbursement happened within 10 mins, as promised.
+              </Typography>
             </Box>
-          </Grid>
-
-          {/* Center for Small Screen */}
-          <Grid item xs={12}>
-            <Box sx={{ p: 2 }}>
-              <img
-                src={centerImage}
-                alt="Center Content"
-                style={{
-                  width: '100%',
-                  height: '200px', // Fixed height for image
-                  borderRadius: 8,
-                  objectFit: 'cover',
-                }}
-              />
-              <Box sx={{ background: '#EFD3D3', padding: 4, borderRadius: 4, marginTop: 2, height: '200px' }}>
-                <Typography variant="h6" color="black" mb={1}>
-                  Ravi Gaur
-                </Typography>
-                <Typography variant="body2" color="textSecondary">
-                  From applying for the loan to getting the funds in my account, I had an amazing
-                  experience! The entire process was very smooth. The staff was polite and guided
-                  me at each step of the procedure.
-                </Typography>
-              </Box>
-            </Box>
-          </Grid>
-
-          {/* Right Side for Small Screen */}
-          <Grid item xs={12}>
-            <Box sx={{ p: 2 }}>
-              <img
-                src={rightImage}
-                alt="Right Content"
-                style={{
-                  width: '100%',
-                  height: '280px', // Fixed height for image
-                  borderRadius: 10,
-                  objectFit: 'cover',
-                }}
-              />
-              <Box sx={{ background: '#EFD3D3', padding: 4, borderRadius: 4, height: '200px',marginTop:2 }}>
-                <Typography variant="h6" color="black" mb={1}>
-                  Rohit Dandotiya
-                </Typography>
-                <Typography variant="body2" color="textSecondary">
-                  It’s rare to come across such credible financial providers as the staff I found here.
-                  They were really understanding and transferred us the money we required
-                  immediately without making us go through any long processes.
-                </Typography>
-              </Box>
-            </Box>
-          </Grid>
+          </Box>
         </Grid>
+      
+        {/* Center for Small Screen */}
+        <Grid item xs={12}>
+          <Box sx={{ p: 2 }}>
+            <img
+              src={centerImage}
+              alt="Center Content"
+              style={{
+                width: '100%',
+                height: '200px', // Fixed height for image
+                borderRadius: 8,
+                objectFit: 'cover',
+              }}
+            />
+            <Box sx={{ background: '#EFD3D3', padding: 4, borderRadius: 4, marginTop: 2, height: 'auto' }}>
+              <Typography variant="h6" color="black" mb={1}>
+                Ravi Gaur
+              </Typography>
+              <Typography variant="body2" color="textSecondary">
+                From applying for the loan to getting the funds in my account, I had an amazing
+                experience! The entire process was very smooth. The staff was polite and guided
+                me at each step of the procedure.
+              </Typography>
+            </Box>
+          </Box>
+        </Grid>
+      
+        {/* Right Side for Small Screen */}
+        <Grid item xs={12}>
+          <Box sx={{ p: 2 }}>
+            <img
+              src={rightImage}
+              alt="Right Content"
+              style={{
+                width: '100%',
+                height: '280px', // Fixed height for image
+                borderRadius: 10,
+                objectFit: 'cover',
+              }}
+            />
+            <Box sx={{ background: '#EFD3D3', padding: 4, borderRadius: 4, marginTop: 2, height: 'auto' }}>
+              <Typography variant="h6" color="black" mb={1}>
+                Rohit Dandotiya
+              </Typography>
+              <Typography variant="body2" color="textSecondary">
+                It’s rare to come across such credible financial providers as the staff I found here.
+                They were really understanding and transferred us the money we required
+                immediately without making us go through any long processes.
+              </Typography>
+            </Box>
+          </Box>
+        </Grid>
+      </Grid>
+      
       ) : (
         // Layout for Large Screen
         <Grid container spacing={3} justifyContent="center" alignItems="stretch">

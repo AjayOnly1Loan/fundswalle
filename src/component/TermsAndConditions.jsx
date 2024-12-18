@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Box, Typography, Container, Paper, Divider, Slide, Fade } from '@mui/material';
-import privacyImage from '../assets/image/Privacy Policy (1).webp';
 
 const TermsAndConditions = () => {
     const sections = [

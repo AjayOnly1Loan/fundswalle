@@ -1,6 +1,5 @@
 import React from 'react';
 
-import LoanCalculate from './LoanCalculate';
 import SortFAQ from './SortFAQ';
 import FrontPage from '../component/FrontPage';
 import WhoWeAre from '../component/WhoWeAre';
