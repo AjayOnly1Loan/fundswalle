@@ -84,12 +84,12 @@ const WhyChoose = () => {
               borderRadius: "12px", // Curve the corners
               margin: "0", // Remove margin
               "&:hover": {
-                backgroundColor: "black", // Black background on hover
+                backgroundColor: "#240844", // Black background on hover
                 color: "white", // White text on hover
               },
               "&:hover .MuiAccordionSummary-expandIconWrapper": {
                 color: "white", // Ensures the expand icon is white on hover
-                backgroundColor: "black", // Black background on hover
+                backgroundColor: "#240844", // Black background on hover
 
               },
             }}

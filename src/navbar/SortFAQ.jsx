@@ -124,11 +124,11 @@ const SortFAQ = () => {
                                         color: 'black',
                                         transition: 'background-color 0.3s ease',
                                         '&:hover': {
-                                            backgroundColor: 'black',
+                                            backgroundColor: '#240844',
                                             color: 'white',
                                         },
                                         '&.Mui-expanded': {
-                                            backgroundColor: 'black',
+                                            backgroundColor: '#240844',
                                             color: 'white',
                                         },
                                     }}
