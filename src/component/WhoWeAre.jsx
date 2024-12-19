@@ -66,7 +66,7 @@ const WhoWeAre = () => {
             textAlign: 'center',
           }}
         >
-          * Immediate Approval * Minimal Documentation * 100% Transparent & Safe * Support Assistance
+          * Immediate Approval * Minimal Documentation * 100% Transparent & Safe *Dedicated Support & Assistance*
 
 
 
