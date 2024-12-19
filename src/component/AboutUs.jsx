@@ -2,15 +2,11 @@ import React, { useEffect, useRef,useState } from 'react';
 import { Typography, Box ,Paper, Accordion,
   AccordionSummary,Button,
   AccordionDetails, } from '@mui/material';
-import VisionImage from '../assets/image/oUR-Vission-Funds-Wale.jpg'; // Import your vision image here
+import VisionImage from '../assets/image/Our-Vission.jpg'; // Import your vision image here
 import aboutImage from '../assets/image/About-Us--Funds-Wale.jpg'; // Correct image path for about us
 import MissionImage from '../assets/image/Our-Mission-Funds-Walle.jpg'; // Import your mission image here
 import WhyChoose from './WhyChoose';
 import sampleImage from '../assets/image/Screenshot-2024-12-18-205637.jpg'
-
-
-
-
 
 const AboutUs = () => {
 
@@ -367,7 +363,7 @@ Welcome to Fundswalle - your one-stop shop in providing personal finance loans t
         color: 'black',
         backgroundColor: "transparent", // Transparent button background
         '&:hover': {
-          backgroundColor: "#333", // Darker shade on hover
+          backgroundColor: "#240844", // Darker shade on hover
           color: 'white',
         },
       }}

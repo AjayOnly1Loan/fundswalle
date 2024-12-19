@@ -33,7 +33,7 @@ const slideInLeft = keyframes`
 const LoanCalculator = () => {
     const [loanAmount, setLoanAmount] = useState(5000);
     const [loanTenure, setLoanTenure] = useState(1);
-    const [interestRate, setInterestRate] = useState(5);
+    const [interestRate, setInterestRate] = useState(.5);
     const [totalAmount, setTotalAmount] = useState(51000);
     const [dailyPayment, setDailyPayment] = useState(0);
     const [showDialog, setShowDialog] = useState(false); // State for dialog visibility
@@ -112,7 +112,7 @@ const LoanCalculator = () => {
                 value={loanAmount || ''}
                 onChange={(e) => {
                     const value = Number(e.target.value);
-                    if (value >= 5000 && value <= 100000) {
+                    if ( value <= 100000) {
                         setLoanAmount(value);
                     } else if (value > 100000) {
                         setLoanAmount(100000);
@@ -174,7 +174,7 @@ const LoanCalculator = () => {
                 value={loanTenure || ''}
                 onChange={(e) => {
                     const value = Number(e.target.value);
-                    if (value >= 1 && value <= 90) {
+                    if ( value <= 90) {
                         setLoanTenure(value);
                     } else if (value > 90) {
                         setLoanTenure(90);
@@ -236,7 +236,7 @@ const LoanCalculator = () => {
                 value={interestRate || ''}
                 onChange={(e) => {
                     const value = Number(e.target.value);
-                    if (value >= 0.5 && value <= 2.75) {
+                    if ( value <= 2.75) {
                         setInterestRate(value);
                     } else if (value > 2.75) {
                         setInterestRate(2.75);

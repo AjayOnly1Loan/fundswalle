@@ -40,7 +40,7 @@ const WhoWeAre = () => {
       sx={{
         position: 'relative',
         backgroundColor: "#f9f9f9",
-        padding: { xs: '20px', sm: '30px' },
+        paddingX: { xs: '20px', sm: '30px' },
         overflow: 'hidden',
       }}
     >
@@ -61,7 +61,7 @@ const WhoWeAre = () => {
             display: 'inline-block',
             animation: 'scroll-text 20s linear infinite',
             fontSize: { xs: '14px', sm: '25px' },
-            color: 'black ',
+            color: '#240844 ',
             fontWeight: 700,
             textAlign: 'center',
           }}
@@ -91,102 +91,87 @@ const WhoWeAre = () => {
       {/* Left Section: Heading */}
       <Box
   sx={{
-    textAlign: 'left',
-    mt: { xs: 2, sm: 3 }, // Reduced top margin for small screens
+    textAlign: "center", // Center align the entire content
+    mt: { xs: 2, sm: 2 }, // Top margin for spacing
+    backgroundColor: "#f9f9f9",
+    padding: { xs: "20px", sm: "30px" },
+    overflow: "hidden",
   }}
 >
-  {/* Right part of the content (Description Text) */}
+  {/* Centered Heading */}
   <Box
     sx={{
-      display: 'flex', // Apply flexbox layout
-      flexDirection: { xs: 'column', sm: 'row' }, // Stack items vertically on small screens and horizontally on larger screens
-      justifyContent: 'space-between',
-      alignItems: 'center',
-      backgroundColor: "#f9f9f9",
-      padding: { xs: '20px', sm: '30px' },
-      overflow: 'hidden',
+      textAlign: "center",
+      mb: 3, // Add spacing below the heading
     }}
   >
-    {/* Left Section: Heading */}
-    <Box
+    <Typography
+      variant="h4"
+      color="#240844"
       sx={{
-        textAlign: 'left',
-        flex: 1, // Take up equal space in the flex container
-        marginBottom: { xs: 2, sm: 0 }, // Reduced margin bottom on small screens
+        fontSize: { xs: "1.5rem", sm: "2.5rem", md: "2.5rem" }, // Responsive font size
+        fontWeight: "bold",
       }}
     >
-      <Typography
-        variant="h2"
-        color="black"
-        mb={1}
-        sx={{
-          mb:{xs:0,md:25},
-                    marginLeft: { xs: 2, sm: 5 },
-          fontSize: { xs: '1.2rem', sm: '2rem', md: '2rem' }, // Adjust font size based on screen size
-        }}
-      >
-        Who Are We?
-      </Typography>
-    </Box>
+      Who Are We?
+    </Typography>
+  </Box>
 
-    {/* Right Section: Description Text */}
-    <Box
-      sx={{
-        flex: 2, // Take up more space than the heading
-        textAlign: 'left',
-      }}
-    >
-      <Box sx={{ display: 'inline-block', textAlign: 'left', mb: 3 }}>
-        {words.map((word, index) => (
-          <Typography
-            key={index}
-            fontSize={{ xs: '14px', sm: '20px' }} // Adjust font size of words for smaller screens
-            lineHeight={{ xs: '25px', lg: '40px', md: '30px' }}
-            fontWeight={50}
-            sx={{
-              fontWeight: 540,
-              opacity: isVisible ? 1 : 0,
-              transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
-              transition: `opacity 0.3s ease ${index * 0.01}s, transform 0.3s ease ${index * 0.01}s`,
-              display: 'inline-block',
-              margin: '0 5px',
-            }}
-          >
-            {word}
-          </Typography>
-        ))}
-      </Box>
-
-      {/* Read More Button */}
-<Box
-  sx={{
-    display: 'flex',
-    justifyContent:{xs:'center',md:"left"}, // Center the button horizontally
-    alignItems:{xs:'center',md:"left"}, // Center the button vertically (optional, depending on layout)
-    mt: 3, // Add some margin top if needed
-  }}
->
-  <Button
-    variant="contained"
-    href="/about-us" // Add your 'About Us' page link here
+  {/* Description Text Below the Heading */}
+  <Box
     sx={{
-      backgroundColor: 'rgb(47, 47, 47)',
-      color: 'white',
-      borderRadius: '80px',
-      fontWeight: 'bold',
-      fontSize: { xs: '14px', sm: '16px' },
-      padding: { xs: '8px 16px', sm: '6px 30px' },
-      '&:hover': {
-        backgroundColor: 'white',
-        color: '#240844',
-      },
+      textAlign: "center", // Center align the description text
+      mb: 3,
     }}
   >
-    Read More
-  </Button>
-</Box>
-
+    <Box sx={{ display: "inline-block", textAlign: "center",paddingX:10, }}>
+      {words.map((word, index) => (
+        <Typography
+          key={index}
+          fontSize={{ xs: "14px", sm: "20px" }} // Responsive font size
+          lineHeight={{ xs: "25px", lg: "40px", md: "30px" }}
+          fontWeight={540}
+          sx={{
+            
+            opacity: isVisible ? 1 : 0,
+            transform: isVisible ? "translateY(0)" : "translateY(20px)",
+            transition: `opacity 0.3s ease ${index * 0.01}s, transform 0.3s ease ${index * 0.01}s`,
+            display: "inline-block",
+            margin: "0 5px",
+          }}
+        >
+          {word}
+        </Typography>
+      ))}
     </Box>
+  </Box>
+
+  {/* Read More Button Below the Description */}
+  <Box
+    sx={{
+      display: "flex",
+      justifyContent: "center", // Center align the button
+      mt: 3, // Add margin above the button
+    }}
+  >
+    <Button
+      variant="contained"
+      href="/about-us" // Link to the About Us page
+      sx={{
+        backgroundColor: "#240844",
+        color: "white",
+        borderRadius: "80px",
+        fontWeight: "bold",
+        fontSize: { xs: "14px", sm: "16px" },
+        padding: { xs: "8px 16px", sm: "6px 30px" },
+        "&:hover": {
+          backgroundColor: "white",
+          color: "#240844",
+        },
+      }}
+    >
+      Read More
+    </Button>
   </Box>
 </Box>
 

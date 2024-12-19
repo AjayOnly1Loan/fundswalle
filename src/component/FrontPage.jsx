@@ -87,7 +87,7 @@ const FrontPage = () => {
               href="/apply-now"
               sx={{
                 borderRadius: "80px",
-                backgroundColor: "black",
+                backgroundColor: "#240844",
                 color: "white",
                 fontWeight: "bold",
                 fontSize: { xs: "14px", sm: "16px" },

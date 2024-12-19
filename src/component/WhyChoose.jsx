@@ -7,6 +7,7 @@ import {
   AccordionDetails,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import WhyChooseImage from "../assets/image/Who-we-are-section.jpg"; // Replace with the actual path to your image
 
 const WhyChoose = () => {
   const features = [
@@ -45,7 +46,6 @@ const WhyChoose = () => {
   return (
     <Box
       sx={{
-        
         display: "flex",
         flexDirection: { xs: "column", md: "row" },
         alignItems: "flex-start",
@@ -53,15 +53,29 @@ const WhyChoose = () => {
         paddingX: { xs: 2, md: 7 },
       }}
     >
-      {/* Left Side: Title and Description */}
+      {/* Left Side: Title, Description, and Image */}
       <Box sx={{ maxWidth: { xs: "100%", md: "40%" } }}>
         <Typography variant="h4" component="h2" fontWeight="bold" gutterBottom>
           Why Choose Us?
         </Typography>
-        <Typography variant="body1" sx={{ color: "gray" }}>
-        Your dreams don’t have to wait anymore! Come to us and apply for personal finance now
-        and we will help you resolve your financial concerns right away!
+        <Typography variant="body1" sx={{ color: "#240844" }}>
+          Your dreams don’t have to wait anymore! Come to us and apply for personal finance now
+          and we will help you resolve your financial concerns right away!
         </Typography>
+        {/* Image Below the Text */}
+        <Box
+          component="img"
+          src={WhyChooseImage} // Use the imported image here
+          alt="Why Choose Us Image"
+          sx={{
+            width: "100%",
+            height: "auto",
+            marginTop: 1,
+            borderRadius: 8,
+            marginBottom:{xs:3,md:0},
+            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
+          }}
+        />
       </Box>
 
       {/* Right Side: Accordions */}
@@ -77,24 +91,21 @@ const WhyChoose = () => {
             key={index}
             disableGutters
             sx={{
-              background:'transparent',
-
+              background: "transparent",
               boxShadow: 0,
-              border: "1px solid black", // Black border
-              borderRadius: "12px", // Curve the corners
-              margin: "0", // Remove margin
+              border: "1px solid black",
+              borderRadius: "12px",
+              margin: "0",
               "&:hover": {
-                backgroundColor: "#240844", // Black background on hover
-                color: "white", // White text on hover
+                backgroundColor: "#240844",
+                color: "white",
               },
               "&:hover .MuiAccordionSummary-expandIconWrapper": {
-                color: "white", // Ensures the expand icon is white on hover
-                backgroundColor: "#240844", // Black background on hover
-
+                color: "white",
+                backgroundColor: "#240844",
               },
             }}
           >
-            {/* Accordion Header */}
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
               sx={{
@@ -104,8 +115,6 @@ const WhyChoose = () => {
             >
               {feature.title}
             </AccordionSummary>
-
-            {/* Accordion Content */}
             <AccordionDetails
               sx={{
                 padding: "10px 12px",

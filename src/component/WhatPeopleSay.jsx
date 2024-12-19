@@ -13,7 +13,8 @@ const WhatPeopleSay = () => {
     <Box sx={{ paddingX: { xs: 2, sm: 12 }, textAlign: 'center', background: '#f9f9f9' }}>
       {/* Heading Section */}
       <Typography variant="h4" color="black" mb={2}>
-        What People Say
+         What People Say ?
+
       </Typography>
       <Typography variant="h5" color="textSecondary" mb={4} sx={{ paddingX: { xs: 2, sm: 12 } }}>
         Real stories, real trust, real transformation - all come with real results - Fundswalle became a game-changer for their financial journeys.

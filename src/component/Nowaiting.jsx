@@ -67,16 +67,24 @@ const Nowaiting = () => {
           {/* Left Section: Heading */}
           <Box
             sx={{
+              background:'#240844',
+              
               textAlign: 'left',
               flex: 1, // Take up equal space in the flex container
-              marginBottom: { xs: 2, sm: 0 }, // Reduced margin bottom on small screens
+              marginBottom: { xs: 2, sm: 3 }, // Reduced margin bottom on small screens
+              border:'2px solid gray',
+              borderBottomLeftRadius:60,
+              borderTopRightRadius:60
+
+
             }}
           >
             <Typography
               variant="h4"
-              color="black"
+              color="white"
               mb={1}
               sx={{
+                padding:2,
                 mb: { xs: 0, md: 8},
                 marginLeft: { xs: 2, sm: 4 },
                 // fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem' }, // Adjust font size based on screen size

@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Typography, Grid } from '@mui/material';
 
 // Import images
-import eligibilityImage1 from '../assets/image/Credit-Score.png'; // Replace with the actual path to your image
+import eligibilityImage1 from '../assets/image/Credit-Score (1).png'; // Replace with the actual path to your image
 import eligibilityImage2 from '../assets/image/Secure-Loan (1).png'; // Replace with the actual path to your image
 import eligibilityImage3 from '../assets/image/personal-loan.png'; // Replace with the actual path to your image
 
@@ -10,7 +10,7 @@ const Eligibility = () => {
   return (
     <Box sx={{ textAlign: 'center', backgroundColor: "#f9f9f9" }}>
       {/* Heading */}
-      <Typography variant="h4" color="black" mb={6}>
+      <Typography variant="h4" color="#240844" mb={6}>
         Who is Eligible for Our Loan?
       </Typography>
 
@@ -45,7 +45,7 @@ const Eligibility = () => {
           objectFit: 'contain', // Prevents stretching and keeps the aspect ratio
         }}
       />
-      <Typography variant="h5">Credit Score</Typography>
+      <Typography variant="h5">Bed Credit Score</Typography>
       <Typography variant="h6" color="textSecondary">
         Those who don’t have a good credit score.
       </Typography>
@@ -82,7 +82,7 @@ const Eligibility = () => {
           objectFit: 'contain', // Prevents stretching and keeps the aspect ratio
         }}
       />
-      <Typography variant="h5">Secured Loan</Typography>
+      <Typography variant="h5">Unsecured Loan</Typography>
       <Typography variant="h6" color="textSecondary">
         Those who weren’t able to get a secured loan.
       </Typography>
@@ -115,11 +115,12 @@ const Eligibility = () => {
         style={{
           width: '100px',
           height: '80px',
+          marginTop:"35px",
           marginBottom: '30px',
           objectFit: 'contain', // Prevents stretching and keeps the aspect ratio
         }}
       />
-      <Typography variant="h5">Personal Loans</Typography>
+      <Typography variant="h5" >Personal Loans</Typography>
       <Typography variant="h6" color="textSecondary">
         Those who have no other resources to avail personal loans.
       </Typography>

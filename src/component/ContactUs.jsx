@@ -1,15 +1,69 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { TextField, Button, Grid, Typography, Box } from '@mui/material';
 import Swal from 'sweetalert2';
 
 const AboutUs = () => {
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    phoneNumber: '',
+    subject: '',
+    message: '',
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    // Input validation logic
+    if (name === 'fullName') {
+      if (/^[a-zA-Z\s]*$/.test(value)) {
+        setFormData({ ...formData, [name]: value });
+      }
+    } else if (name === 'phoneNumber') {
+      if (/^\d{0,10}$/.test(value)) {
+        setFormData({ ...formData, [name]: value });
+      }
+    } else {
+      setFormData({ ...formData, [name]: value });
+    }
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    // Form validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Invalid Email',
+        text: 'Please enter a valid email address.',
+      });
+      return;
+    }
+
+    if (formData.phoneNumber.length !== 10) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Invalid Phone Number',
+        text: 'Phone number must be exactly 10 digits.',
+      });
+      return;
+    }
+
     Swal.fire({
       icon: 'success',
       title: 'Thank You!',
       text: 'We will get in touch with you soon.',
       confirmButtonText: 'OK',
+    });
+
+    setFormData({
+      fullName: '',
+      email: '',
+      phoneNumber: '',
+      subject: '',
+      message: '',
     });
   };
 
@@ -55,9 +109,9 @@ const AboutUs = () => {
     borderRadius: 15,
   }}
 >
-  <Grid container spacing={2}>
+  <Grid container spacing={1}>
     {/* Mobile and Email in the first row */}
-    <Grid item xs={12} sm={6}>
+    <Grid item xs={12} sm={12}>
       <Typography
         sx={{
           fontSize: '1.5rem',
@@ -68,25 +122,24 @@ const AboutUs = () => {
       </Typography>
       <Typography sx={{ mb: 1 }}>+91 7042334888</Typography>
     </Grid>
-    <Grid item xs={12} sm={6}>
+    <Grid item xs={12} sm={12}>
       <Typography
         sx={{
           fontSize: '1.5rem',
-          mb: 1,
+          mb:2
         }}
       >
         Email
       </Typography>
-      <Typography sx={{ mb: 1 }}>info@fundswalle.com</Typography>
+      <Typography sx={{ mb: 2 }}>info@fundswalle.com</Typography>
     </Grid>
 
     {/* Reach Us in the second row */}
     <Grid item xs={12}>
       <Typography
         sx={{
-          mt:{xs:5,md:12},
           fontSize: '1.5rem',
-          mb: 1,
+          mb: 2,
         }}
       >
      Reach Us 
@@ -103,109 +156,131 @@ const AboutUs = () => {
 
           {/* Right Section: Form */}
           <Grid item xs={12} md={5.6}>
-                    <Box
-            component="form"
-            onSubmit={handleSubmit}
-            sx={{
-              marginTop:6,
-              background: 'rgba(255, 255, 255, 0.9)',
-              padding: 6,
-              borderRadius: 7,
-              boxShadow: '0px 6px 15px rgba(0, 0, 0, 0.15)',
-            }}
-          >
-           
-            <Grid container spacing={2}>
-              <Grid item xs={12} sm={6}>
-                <TextField
-                  label="Full Name"
-                  variant="outlined"
-                  fullWidth
-                  required
-                  sx={{
-                    '& .MuiInputBase-input': {
-                      fontSize: '16px',
-                    },
-                  }}
-                />
+            <Box
+              component="form"
+              onSubmit={handleSubmit}
+              sx={{
+                marginTop: 6,
+                background: 'rgba(255, 255, 255, 0.9)',
+                padding: 6,
+                borderRadius: 7,
+                boxShadow: '0px 6px 15px rgba(0, 0, 0, 0.15)',
+              }}
+            >
+              <Grid container spacing={2}>
+                <Grid item xs={12} sm={6}>
+                  <TextField
+                    label="Full Name"
+                    variant="outlined"
+                    fullWidth
+                    required
+                    name="fullName"
+                    value={formData.fullName}
+                    onChange={handleChange}
+                    inputProps={{
+                      pattern: '^[a-zA-Z\\s]*$',
+                    }}
+                    sx={{
+                      '& .MuiInputBase-input': {
+                        fontSize: '16px',
+                      },
+                    }}
+                  />
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                  <TextField
+                    label="Email"
+                    type="email"
+                    variant="outlined"
+                    fullWidth
+                    required
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    sx={{
+                      '& .MuiInputBase-input': {
+                        fontSize: '16px',
+                      },
+                    }}
+                  />
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                  <TextField
+                    label="Phone Number"
+                    type="tel"
+                    variant="outlined"
+                    fullWidth
+                    required
+                    name="phoneNumber"
+                    value={formData.phoneNumber}
+                    onChange={handleChange}
+                    inputProps={{
+                      inputMode: 'numeric',
+                      pattern: '\\d*',
+                      maxLength: 10,
+                    }}
+                    sx={{
+                      '& .MuiInputBase-input': {
+                        fontSize: '16px',
+                      },
+                    }}
+                  />
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                  <TextField
+                    label="Subject"
+                    variant="outlined"
+                    fullWidth
+                    required
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    sx={{
+                      '& .MuiInputBase-input': {
+                        fontSize: '16px',
+                      },
+                    }}
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <TextField
+                    label="Message"
+                    variant="outlined"
+                    fullWidth
+                    multiline
+                    rows={4}
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    sx={{
+                      '& .MuiInputBase-input': {
+                        fontSize: '16px',
+                      },
+                    }}
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <Button
+                    type="submit"
+                    variant="contained"
+                    fullWidth
+                    sx={{
+                      backgroundColor: '#240844',
+                      color: '#fff',
+                      padding: '10px',
+                      '&:hover': {
+                        backgroundColor: 'white',
+                        color: 'black',
+                      },
+                    }}
+                  >
+                    Send Message
+                  </Button>
+                </Grid>
               </Grid>
-              <Grid item xs={12} sm={6}>
-                <TextField
-                  label="Email"
-                  type="email"
-                  variant="outlined"
-                  fullWidth
-                  required
-                  sx={{
-                    '& .MuiInputBase-input': {
-                      fontSize: '16px',
-                    },
-                  }}
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <TextField
-                  label="Phone Number"
-                  type="tel"
-                  variant="outlined"
-                  fullWidth
-                  required
-                  sx={{
-                    '& .MuiInputBase-input': {
-                      fontSize: '16px',
-                    },
-                  }}
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <TextField
-                  label="Subject"
-                  variant="outlined"
-                  fullWidth
-                  required
-                  sx={{
-                    '& .MuiInputBase-input': {
-                      fontSize: '16px',
-                    },
-                  }}
-                />
-              </Grid>
-              <Grid item xs={12}>
-                <TextField
-                  label="Message"
-                  variant="outlined"
-                  fullWidth
-                  multiline
-                  rows={4}
-                  sx={{
-                    '& .MuiInputBase-input': {
-                      fontSize: '16px',
-                    },
-                  }}
-                />
-              </Grid>
-              <Grid item xs={12}>
-                <Button
-                  type="submit"
-                  variant="contained"
-                  fullWidth
-                  sx={{
-                    backgroundColor: '#444',
-                    color: '#fff',
-                    padding: '10px',
-                    '&:hover': {
-                      backgroundColor: 'white',
-                      color:'black'
-                    },
-                  }}
-                >
-                  Send Message
-                </Button>
-              </Grid>
-            </Grid>
-          </Box>
-
+            </Box>
           </Grid>
+        
         </Grid>
       </Box>
 
