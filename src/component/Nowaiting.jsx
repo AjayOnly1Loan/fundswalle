@@ -84,7 +84,6 @@ const Nowaiting = () => {
               color="white"
               mb={1}
               sx={{
-                padding:2,
                 mb: { xs: 0, md: 8},
                 marginLeft: { xs: 2, sm: 4 },
                 // fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem' }, // Adjust font size based on screen size

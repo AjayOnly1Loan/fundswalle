@@ -7,12 +7,12 @@ import centerImage from '../assets/image/2 (1).png'; // Replace with your image 
 import rightImage from '../assets/image/3 (1).png'; // Replace with your image path
 
 const WhatPeopleSay = () => {
-  const isSmallScreen = useMediaQuery('(max-width:600px)');
+  const isSmallScreen = useMediaQuery('(max-width:800px)');
 
   return (
     <Box sx={{ paddingX: { xs: 2, sm: 12 }, textAlign: 'center', background: '#f9f9f9' }}>
       {/* Heading Section */}
-      <Typography variant="h4" color="240844" mb={2} sx={{fontWeight:'bold',fontSize:'2.5rem'}}>
+      <Typography variant="h4" color="#240844" mb={2} sx={{fontWeight:'bold',fontSize:'2.5rem'}}>
          What People Say ?
 
       </Typography>
