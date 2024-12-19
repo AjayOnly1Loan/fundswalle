@@ -50,7 +50,7 @@ const FAQs = () => {
                     sx={{
                         textAlign: 'center',
                         fontWeight: 'bold',
-                        color: 'black',
+                        color: '#240844',
                         mb: 3,
                         fontSize:{xs:'2rem',md:'3rem'} ,
                         padding: '0.5rem',
@@ -174,11 +174,11 @@ const FAQs = () => {
                                     sx={{
                                         color: 'black',
                                         '&:hover': {
-                                            backgroundColor: 'black', // Black background on hover
+                                            backgroundColor: '#240844', // Black background on hover
                                             color: 'white', // White text on hover
                                         },
                                         '&.Mui-expanded': {
-                                            backgroundColor: 'black',
+                                            backgroundColor: '#240844',
                                             color: 'white',
                                         },
                                     }}

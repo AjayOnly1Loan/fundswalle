@@ -180,7 +180,7 @@ const PrivacyPolicy = () => {
                                 gutterBottom 
                                 sx={{ 
                                     textAlign:'center',
-                                    color: 'black', 
+                                    color: '#240844', 
                                     fontWeight: 'bold', 
                                     fontSize:{xs:'2rem',md:'3rem'}, 
                                     letterSpacing: '0.05em',

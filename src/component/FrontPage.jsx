@@ -56,10 +56,8 @@ const FrontPage = () => {
           <Typography
             variant="h2"
             sx={{
-              paddingX: { xs: 2, md: 20 },
               paddingTop: { xs: 3, md: 13 },
               fontWeight: "500",
-              paddingX:{xs:2,md:32},
               color: "white",
               marginBottom: theme.spacing(2),
               [theme.breakpoints.down("sm")]: {
@@ -70,9 +68,7 @@ const FrontPage = () => {
               },
             }}
           >
-            Now taking loans with just a tap has  never been made that easier.
-            Get funds  instantly transferred to your bank  account in just a few
-            mins…
+            Just Tap & Get Funds in Minutes !
           </Typography>
 
           <Box
