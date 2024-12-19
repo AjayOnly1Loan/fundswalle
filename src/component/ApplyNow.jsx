@@ -221,7 +221,7 @@ const ApplyNow = () => {
     
     const errors = validateForm(); // Validate form and get errors
     
-    console.log("the values of onject ",Object.keys(errors).length)
+    console.log("the values of object ",Object.keys(errors).length)
     // Check for validation errors
     if (Object.keys(errors).length >=2) {
       setFormErrors(errors); // Set the errors in state

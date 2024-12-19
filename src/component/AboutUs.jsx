@@ -4,11 +4,9 @@ import { Typography, Box ,Paper, Accordion,
   AccordionDetails, } from '@mui/material';
 import VisionImage from '../assets/image/oUR-Vission-Funds-Wale.jpg'; // Import your vision image here
 import aboutImage from '../assets/image/About-Us--Funds-Wale.jpg'; // Correct image path for about us
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MissionImage from '../assets/image/Our-Mission-Funds-Walle.jpg'; // Import your mission image here
-import AutoplayCarousel from './WhyChoose';
 import WhyChoose from './WhyChoose';
-
+import sampleImage from '../assets/image/Screenshot-2024-12-18-205637.jpg'
 
 
 
@@ -383,18 +381,19 @@ Welcome to Fundswalle - your one-stop shop in providing personal finance loans t
 
   {/* Image Box (on the right side) */}
   <Box
-    sx={{
-      width: { xs: "100%", md: "50%" },
-      height: { xs: "250px", md: "400px" }, // Responsive height for small and large screens
-      borderRadius: "30px",
-      objectFit: "cover",
-      marginTop: { xs: "20px", md: "0" },
-      marginLeft: { md: 3 },
-      marginBottom: { xs: "20px", md: "0" },
-    }}
-  >
-    {/* You can add an image here if needed */}
-  </Box>
+      sx={{
+        width: { xs: "100%", md: "50%" },
+        height: { xs: "250px", md: "400px" },
+        borderRadius: "30px",
+        objectFit: "cover",
+        marginTop: { xs: "20px", md: "0" },
+        marginLeft: { md: 3 },
+        marginBottom: { xs: "20px", md: "0" },
+        backgroundImage: `url(${sampleImage})`, // Add the image as background
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    />
 </Box>
 
 
