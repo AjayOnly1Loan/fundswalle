@@ -69,8 +69,9 @@ const SortFAQ = () => {
                 variant="h3"
                 sx={{
                     textAlign: 'center',
-                    color: 'black',
+                    color: '#240844',
                     mb: 4,
+                    fontWeight:'bold',
                     fontSize: { xs: '1.8rem', sm: '2.5rem', md: '2.5' }, // Adjust font size based on screen size
                     fontFamily: 'Arial, sans-serif',
                 }}

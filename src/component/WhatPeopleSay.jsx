@@ -12,7 +12,7 @@ const WhatPeopleSay = () => {
   return (
     <Box sx={{ paddingX: { xs: 2, sm: 12 }, textAlign: 'center', background: '#f9f9f9' }}>
       {/* Heading Section */}
-      <Typography variant="h4" color="black" mb={2}>
+      <Typography variant="h4" color="240844" mb={2} sx={{fontWeight:'bold',fontSize:'2.5rem'}}>
          What People Say ?
 
       </Typography>

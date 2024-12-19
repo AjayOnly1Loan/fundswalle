@@ -1,8 +1,8 @@
 import React from "react";
 import { Typography, Box } from "@mui/material";
 import { useMediaQuery } from "@mui/material";
-import contentImage from "../assets/image/Group 102.png"; // Image for larger screens
-import contentImageSmall from "../assets/image/Frame 537.png"; // Image for small screens (add this image)
+import contentImage from "../assets/image/Frame 539.png"; // Image for larger screens
+import contentImageSmall from "../assets/image/Frame 537 (2).png"; // Image for small screens (add this image)
 
 const WhyChooseUs = () => {
   const isSmallScreen = useMediaQuery("(max-width:600px)"); // Check if screen width is small

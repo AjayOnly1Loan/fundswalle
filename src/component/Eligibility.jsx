@@ -10,7 +10,7 @@ const Eligibility = () => {
   return (
     <Box sx={{ textAlign: 'center', backgroundColor: "#f9f9f9" }}>
       {/* Heading */}
-      <Typography variant="h4" color="#240844" mb={6}>
+      <Typography variant="h4" color="#240844" mb={6} fontWeight={'bold'} sx={{fontSize:'2.5rem'}}>
         Who is Eligible for Our Loan?
       </Typography>
 
@@ -45,7 +45,7 @@ const Eligibility = () => {
           objectFit: 'contain', // Prevents stretching and keeps the aspect ratio
         }}
       />
-      <Typography variant="h5">Bed Credit Score</Typography>
+      <Typography variant="h5">Bad Credit Score</Typography>
       <Typography variant="h6" color="textSecondary">
         Those who don’t have a good credit score.
       </Typography>

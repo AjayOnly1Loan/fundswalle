@@ -124,7 +124,7 @@ const WhoWeAre = () => {
       mb: 3,
     }}
   >
-    <Box sx={{ display: "inline-block", textAlign: "center",paddingX:10, }}>
+    <Box sx={{ display: "inline-block", textAlign: "center",paddingX:{xs:0,md:10} }}>
       {words.map((word, index) => (
         <Typography
           key={index}
