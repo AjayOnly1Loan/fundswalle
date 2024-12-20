@@ -19,21 +19,19 @@ const linkStyle = {
 
 const Footer = () => {
   return (
-    <Box sx={{ 
-      background: '#f9f9f9', 
-      width: '100%', 
-      display: 'flex', 
-      justifyContent: 'center',
-    }}>   
+    // <Box sx={{ 
+    //   background: '#f9f9f9', 
+    //   width: '100%', 
+    //   display: 'flex', 
+    //   justifyContent: 'center',
+    // }}>   
       <Box
         sx={{
-          margin: 5,
-          borderRadius: 10,
           backgroundColor: '#240844',
           padding: {
             xs: '40px 20px',
             sm: '60px 30px',
-            md: '80px 5px',
+            md: '40px 2px',
           },
           color: '#fff',
           textAlign: 'center',
@@ -56,7 +54,7 @@ const Footer = () => {
                 alignItems="center"
               >
                 <img src={logo} alt="Logo" style={{ width: '60%', height: 'auto', marginBottom: '16px' }} />
-                <Box display="flex" gap={2} justifyContent="center" mt={5}> {/* Social Media Icons */}
+                <Box display="flex" gap={2} justifyContent="center" mt={2}> {/* Social Media Icons */}
                   <Link href="/" sx={{ ...iconStyle, backgroundColor: '#4267B2' }}><Facebook /></Link>
                   <Link 
                     href="/" 
@@ -71,7 +69,7 @@ const Footer = () => {
                     <img 
                       src={TwitterIcon} 
                       alt="Twitter" 
-                      style={{ width: '24px', height: '24px' }} 
+                      style={{ width: '24px', height: '20px' }} 
                     />
                   </Link>
                   <Link href="/" target="_blank" sx={{ ...iconStyle, backgroundColor: '#0077B5' }}><LinkedIn /></Link>
@@ -132,7 +130,7 @@ const Footer = () => {
           </Container>
 
           {/* Footer Bottom */}
-          <Box mt={2} py={1} style={{
+          <Box mt={1} py={1} style={{
             backgroundColor: 'rgba(128, 128, 128, 0.2)',
             textAlign: 'center',
             borderRadius: '0 0 10px 10px',
@@ -144,7 +142,7 @@ const Footer = () => {
           </Box>
         </footer>
       </Box>
-    </Box>
+    // </Box>
   );
 };
 
@@ -153,7 +151,7 @@ const iconStyle = {
   backgroundColor: '#1DA1F2', // Default background color for icons
   borderRadius: '50%',
   padding: '8px',
-  fontSize: '20px',
+  // fontSize: '20px',
   transition: 'transform 0.3s ease',
   '&:hover': {
     transform: 'scale(1.1)',
