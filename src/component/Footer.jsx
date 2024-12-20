@@ -23,101 +23,127 @@ const Footer = () => {
       background: '#f9f9f9', 
       width: '100%', 
       display: 'flex', 
+      justifyContent: 'center',
     }}>   
-<Box sx={{
-  margin: 5,
-  borderRadius: 10,
-  backgroundColor: '#240844',
-  padding: {
-    xs: '40px 20px', // padding for extra small screens (mobile)
-    sm: '60px 30px', // padding for small screens (tablet)
-    md: '80px 5px', // padding for medium and larger screens (desktop)
-  },
-  color: '#fff',
-  position: 'relative',
-  boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)',
-}}>
-
-      <footer>
-        <Container maxWidth="lg" style={{ position: 'relative', zIndex: 1  }}>
-          <Grid container spacing={1} alignItems="center">
-            {/* Left Section (Logo and Social Icons) */}
-            <Grid item xs={12} md={4} container spacing={3} direction="column" justifyContent="center" alignItems="center">
-              <img src={logo} alt="Logo" style={{ width: '60%', height: 'auto',mb:5 }} />
-              <Box display="flex" gap={2} justifyContent="center" mt={5}> {/* Social Media Icons */}
-                <Link href="/" sx={{ ...iconStyle, backgroundColor: '#4267B2' }}><Facebook /></Link>
-                              <Link 
-                href="/" 
-                sx={{ 
-                  ...iconStyle, 
-                  backgroundColor: '#1DA1F2',
-                  display: 'flex', 
-                  justifyContent: 'center', 
-                  alignItems: 'center',
-                }}
-              >
-                <img 
-                  src={TwitterIcon} 
-                  alt="Twitter" 
-                  style={{ width: '24px', height: '24px' }} // Adjust size as needed
-                />
-              </Link>
-                <Link href="/" target="_blank" sx={{ ...iconStyle, backgroundColor: '#0077B5' }}><LinkedIn /></Link>
-                <Link href="/" target="_blank" sx={{ ...iconStyle, backgroundColor: '#C13584' }}><Instagram /></Link>
-                <Link href="/" target="_blank" sx={{ ...iconStyle, backgroundColor: '#FF0000' }}><YouTube /></Link>
-              </Box>
-            </Grid>
-
-            {/* Right Section (Fast Link, Resources, Contact) */}
-            <Grid item xs={12} md={8} container spacing={3} direction="row" justifyContent="flex-start">
-              {/* Fast Links Section */}
-              <Grid item xs={12} sm={4} sx={{ paddingTop: '12px' }}>
-                <Typography variant="h6" sx={{ color: '#fff', fontWeight: 500, mb: 2 }}>Fast Links</Typography>
-                <Box component="ul" sx={{ listStyleType: 'none', padding: 0, margin: 0 }}>
-                  <li><Link href="/" sx={linkStyle}>Home</Link></li>
-                  <li><Link href="about-us" sx={linkStyle}>About Us</Link></li>
-                  <li><Link href="apply-now" sx={linkStyle}>Apply Now</Link></li>
-                  <li><Link href="repay-now" sx={linkStyle}>Repay Now</Link></li>
-                  <li><Link href="contact-us" sx={linkStyle}>Contact Us</Link></li>
-                </Box>
-              </Grid>
-
-              {/* Resources Section */}
-              <Grid item xs={12} sm={4} sx={{ paddingTop: '12px' }}>
-                <Typography variant="h6" sx={{ color: '#fff', fontWeight: 500, mb: 2 }}>Resources</Typography>
-                <Box component="ul" sx={{ listStyleType: 'none', padding: 0, margin: 0 }}>
-                  <li><Link href="terms-condition" sx={linkStyle}>Terms & Conditions</Link></li>
-                  <li><Link href="privacy-policy" sx={linkStyle}>Privacy Policy</Link></li>
-                  <li><Link href="fqa" sx={linkStyle}>FAQs</Link></li>
-                </Box>
-              </Grid>
-
-              {/* Contact Us Section */}
-              <Grid item xs={12} sm={4} sx={{ paddingTop: '12px' }}>
-                <Typography variant="h6" sx={{ color: '#fff', fontWeight: 500, mb: 2 }}>Contact Us</Typography>
-                <Box component="ul" sx={{ listStyleType: 'none', padding: 0, margin: 0 }}>
-                  <li><Link href="contact-us" sx={{ ...linkStyle, display: 'flex', alignItems: 'center' }}><Email sx={{ mr: 1 }} /> info@fundswalle.com</Link></li>
-                  <li><Link href="contact-us" sx={{ ...linkStyle, display: 'flex', alignItems: 'center' }}><Phone sx={{ mr: 1 }} /> +91 91 7042334888</Link></li>
-                  <li><Link href="contact-us" sx={{ ...linkStyle, display: 'flex', alignItems: 'center' }}><LocationOn sx={{ mr: 1,mt:{xs:-5,md:-7} }} />1710, 17th Floor, World Trade Tower, Sector -16, Noida, Uttar Pradesh - 201301.</Link></li>
-                </Box>
-              </Grid>
-            </Grid>
-          </Grid>
-        </Container>
-
-        {/* Footer Bottom */}
-        <Box mt={2} py={1} style={{
-          backgroundColor: 'rgba(128, 128, 128, 0.2)',
+      <Box
+        sx={{
+          margin: 5,
+          borderRadius: 10,
+          backgroundColor: '#240844',
+          padding: {
+            xs: '40px 20px',
+            sm: '60px 30px',
+            md: '80px 5px',
+          },
+          color: '#fff',
           textAlign: 'center',
-          borderRadius: '0 0 10px 10px',
-          boxShadow: '0 -3px 10px rgba(0, 0, 0, 0.3)',
-        }}>
-          <Typography variant="body2" style={{ color: '#fff', textShadow: '1px 1px 2px rgba(0, 0, 0, 0.7)' }}>
-            Copyright &copy; 2024 fundswalle. All Rights Reserved.
-          </Typography>
-        </Box>
-      </footer>
+          position: 'relative',
+          boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)',
+        }}
+      >
+        <footer>
+          <Container maxWidth="lg">
+            <Grid container spacing={3} justifyContent="center">
+              {/* Left Section (Logo and Social Icons) */}
+              <Grid
+                item
+                xs={12}
+                md={4}
+                container
+                spacing={3}
+                direction="column"
+                justifyContent="center"
+                alignItems="center"
+              >
+                <img src={logo} alt="Logo" style={{ width: '60%', height: 'auto', marginBottom: '16px' }} />
+                <Box display="flex" gap={2} justifyContent="center" mt={5}> {/* Social Media Icons */}
+                  <Link href="/" sx={{ ...iconStyle, backgroundColor: '#4267B2' }}><Facebook /></Link>
+                  <Link 
+                    href="/" 
+                    sx={{ 
+                      ...iconStyle, 
+                      backgroundColor: '#1DA1F2',
+                      display: 'flex', 
+                      justifyContent: 'center', 
+                      alignItems: 'center',
+                    }}
+                  >
+                    <img 
+                      src={TwitterIcon} 
+                      alt="Twitter" 
+                      style={{ width: '24px', height: '24px' }} 
+                    />
+                  </Link>
+                  <Link href="/" target="_blank" sx={{ ...iconStyle, backgroundColor: '#0077B5' }}><LinkedIn /></Link>
+                  <Link href="/" target="_blank" sx={{ ...iconStyle, backgroundColor: '#C13584' }}><Instagram /></Link>
+                  <Link href="/" target="_blank" sx={{ ...iconStyle, backgroundColor: '#FF0000' }}><YouTube /></Link>
+                </Box>
+              </Grid>
+
+              {/* Right Section (Fast Link, Resources, Contact) */}
+              <Grid item xs={12} md={8} container spacing={3} direction="row" alignItems="flex-start">
+  {/* Fast Links Section */}
+  <Grid item xs={12} sm={4} sx={{ paddingTop: '12px' }}>
+    <Typography variant="h6" sx={{ color: '#fff', fontWeight: 500, mb: 2, textAlign: 'left' }}>
+      Fast Links
+    </Typography>
+    <Box component="ul" sx={{ listStyleType: 'none', padding: 0, margin: 0 }}>
+      <li><Link href="/" sx={linkStyle}>Home</Link></li>
+      <li><Link href="about-us" sx={linkStyle}>About Us</Link></li>
+      <li><Link href="apply-now" sx={linkStyle}>Apply Now</Link></li>
+      <li><Link href="repay-now" sx={linkStyle}>Repay Now</Link></li>
+      <li><Link href="contact-us" sx={linkStyle}>Contact Us</Link></li>
     </Box>
+  </Grid>
+
+  {/* Resources Section */}
+  <Grid item xs={12} sm={4} sx={{ paddingTop: '12px' }}>
+    <Typography variant="h6" sx={{ color: '#fff', fontWeight: 500, mb: 2, textAlign: 'left' }}>
+      Resources
+    </Typography>
+    <Box component="ul" sx={{ listStyleType: 'none', padding: 0, margin: 0 }}>
+      <li><Link href="terms-condition" sx={linkStyle}>Terms & Conditions</Link></li>
+      <li><Link href="privacy-policy" sx={linkStyle}>Privacy Policy</Link></li>
+      <li><Link href="fqa" sx={linkStyle}>FAQs</Link></li>
+    </Box>
+  </Grid>
+
+  {/* Contact Us Section */}
+  <Grid item xs={12} sm={4} sx={{ paddingTop: '12px' }}>
+    <Typography variant="h6" sx={{ color: '#fff', fontWeight: 500, mb: 2, textAlign: 'left' }}>
+      Contact Us
+    </Typography>
+    <Box component="ul" sx={{ listStyleType: 'none', padding: 0, margin: 0 }}>
+      <li><Link href="contact-us" sx={{ ...linkStyle, display: 'flex', alignItems: 'center' }}><Email sx={{ mr: 1 }} /> info@fundswalle.com</Link></li>
+      <li><Link href="contact-us" sx={{ ...linkStyle, display: 'flex', alignItems: 'center' }}><Phone sx={{ mr: 1 }} /> +91 91 7042334888</Link></li>
+      <li>
+  <Link href="contact-us" sx={{ ...linkStyle, display: 'flex', alignItems: 'flex-start', textAlign: 'left' }}>
+    <LocationOn sx={{ mr: 1, mt: 0.5 }} />
+    <Box component="span" sx={{ textAlign: 'left' }}>
+      1710, 17th Floor, World Trade Tower, Sector -16, Noida, Uttar Pradesh - 201301.
+    </Box>
+  </Link>
+</li>
+    </Box>
+  </Grid>
+</Grid>
+
+            </Grid>
+          </Container>
+
+          {/* Footer Bottom */}
+          <Box mt={2} py={1} style={{
+            backgroundColor: 'rgba(128, 128, 128, 0.2)',
+            textAlign: 'center',
+            borderRadius: '0 0 10px 10px',
+            boxShadow: '0 -3px 10px rgba(0, 0, 0, 0.3)',
+          }}>
+            <Typography variant="body2" style={{ color: '#fff', textShadow: '1px 1px 2px rgba(0, 0, 0, 0.7)' }}>
+              Copyright &copy; 2024 fundswalle. All Rights Reserved.
+            </Typography>
+          </Box>
+        </footer>
+      </Box>
     </Box>
   );
 };

@@ -192,7 +192,7 @@ const PrivacyPolicy = () => {
                             </Typography>
                     {sections.map((section, sectionIndex) => (
                             <div key={sectionIndex}>
-                                <Box sx={{ transition: 'transform 0.3s ease-in-out', '&:hover': { transform: 'scale(1.05)' } }}>
+                                <Box sx={{paddingX:5, transition: 'transform 0.3s ease-in-out', '&:hover': { transform: 'scale(1.05)' } }}>
                                     <Fade in={isVisible} timeout={1000 + sectionIndex * 500}>
                                         <Typography 
                                             variant="h6" 
