@@ -1,25 +1,25 @@
-import React, { useState } from 'react';
-import { TextField, Button, Grid, Typography, Box } from '@mui/material';
-import Swal from 'sweetalert2';
+import React, { useState } from "react";
+import { TextField, Button, Grid, Typography, Box } from "@mui/material";
+import Swal from "sweetalert2";
 
 const AboutUs = () => {
   const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    phoneNumber: '',
-    subject: '',
-    message: '',
+    fullName: "",
+    email: "",
+    phoneNumber: "",
+    subject: "",
+    message: "",
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
 
     // Input validation logic
-    if (name === 'fullName') {
+    if (name === "fullName") {
       if (/^[a-zA-Z\s]*$/.test(value)) {
         setFormData({ ...formData, [name]: value });
       }
-    } else if (name === 'phoneNumber') {
+    } else if (name === "phoneNumber") {
       if (/^\d{0,10}$/.test(value)) {
         setFormData({ ...formData, [name]: value });
       }
@@ -35,57 +35,54 @@ const AboutUs = () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
       Swal.fire({
-        icon: 'error',
-        title: 'Invalid Email',
-        text: 'Please enter a valid email address.',
+        icon: "error",
+        title: "Invalid Email",
+        text: "Please enter a valid email address.",
       });
       return;
     }
 
     if (formData.phoneNumber.length !== 10) {
       Swal.fire({
-        icon: 'error',
-        title: 'Invalid Phone Number',
-        text: 'Phone number must be exactly 10 digits.',
+        icon: "error",
+        title: "Invalid Phone Number",
+        text: "Phone number must be exactly 10 digits.",
       });
       return;
     }
 
     Swal.fire({
-      icon: 'success',
-      title: 'Thank You!',
-      text: 'We will get in touch with you soon.',
-      confirmButtonText: 'OK',
+      icon: "success",
+      title: "Thank You!",
+      text: "We will get in touch with you soon.",
+      confirmButtonText: "OK",
     });
 
     setFormData({
-      fullName: '',
-      email: '',
-      phoneNumber: '',
-      subject: '',
-      message: '',
+      fullName: "",
+      email: "",
+      phoneNumber: "",
+      subject: "",
+      message: "",
     });
   };
 
   return (
     <Box
       sx={{
-      
-        backgroundColor: '#f9f9f9',
-        minHeight: '100vh',
+        backgroundColor: "#f9f9f9",
+        minHeight: "100vh",
         paddingX: 3,
-        paddingY:1,
+        paddingY: 1,
       }}
     >
-      
-
       {/* Content Section */}
       <Box
         sx={{
-          marginTop:{xs:4,md:4},
-          background: '  #ABC8CB',
-          minHeight: '100vh',
-          borderRadius:7
+          marginTop: { xs: 4, md: 4 },
+          background: "  #ABC8CB",
+          minHeight: "100vh",
+          borderRadius: 7,
         }}
       >
         <Grid container spacing={4}>
@@ -94,64 +91,63 @@ const AboutUs = () => {
             <Typography
               variant="h4"
               sx={{
-                color: '#444',
+                color: "#444",
                 mb: 2,
-                ml:5,
-                fontSize: { xs: '24px', md: '3.3rem' },
+                ml: 5,
+                fontSize: { xs: "24px", md: "3.3rem" },
               }}
             >
               Let's Connect
             </Typography>
             <Box
-  sx={{
-    ml:3,
-    padding: '20px',
-    borderRadius: 15,
-  }}
->
-  <Grid container spacing={1}>
-    {/* Mobile and Email in the first row */}
-    <Grid item xs={12} sm={12}>
-      <Typography
-        sx={{
-          fontSize: '1.5rem',
-          mb: 1,
-        }}
-      >
-        Mobile
-      </Typography>
-      <Typography sx={{ mb: 1 }}>+91 7042334888</Typography>
-    </Grid>
-    <Grid item xs={12} sm={12}>
-      <Typography
-        sx={{
-          fontSize: '1.5rem',
-          mb:2
-        }}
-      >
-        Email
-      </Typography>
-      <Typography sx={{ mb: 2 }}>info@fundswalle.com</Typography>
-    </Grid>
+              sx={{
+                ml: 3,
+                padding: "20px",
+                borderRadius: 15,
+              }}
+            >
+              <Grid container spacing={1}>
+                {/* Mobile and Email in the first row */}
+                <Grid item xs={12} sm={12}>
+                  <Typography
+                    sx={{
+                      fontSize: "1.5rem",
+                      mb: 1,
+                    }}
+                  >
+                    Mobile
+                  </Typography>
+                  <Typography sx={{ mb: 1 }}>+91 8448128666</Typography>
+                </Grid>
+                <Grid item xs={12} sm={12}>
+                  <Typography
+                    sx={{
+                      fontSize: "1.5rem",
+                      mb: 2,
+                    }}
+                  >
+                    Email
+                  </Typography>
+                  <Typography sx={{ mb: 2 }}>info@fundswalle.com</Typography>
+                </Grid>
 
-    {/* Reach Us in the second row */}
-    <Grid item xs={12}>
-      <Typography
-        sx={{
-          fontSize: '1.5rem',
-          mb: 2,
-        }}
-      >
-     Reach Us 
-
-      </Typography>
-      <Typography> 1710, 17th Floor, World Trade Tower,</Typography>
-      <Typography>Sector-16, Noida, Uttar Pradesh - 201301
-      </Typography>
-    </Grid>
-  </Grid>
-</Box>
-
+                {/* Reach Us in the second row */}
+                <Grid item xs={12}>
+                  <Typography
+                    sx={{
+                      fontSize: "1.5rem",
+                      mb: 2,
+                    }}
+                  >
+                    Reach Us
+                  </Typography>
+                  <Typography> 1710, 17th Floor, World Trade Tower,</Typography>
+                  <Typography>
+                    Sector-16, Noida, Uttar Pradesh - 201301
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Box>
           </Grid>
 
           {/* Right Section: Form */}
@@ -161,10 +157,10 @@ const AboutUs = () => {
               onSubmit={handleSubmit}
               sx={{
                 marginTop: 6,
-                background: 'rgba(255, 255, 255, 0.9)',
+                background: "rgba(255, 255, 255, 0.9)",
                 padding: 6,
                 borderRadius: 7,
-                boxShadow: '0px 6px 15px rgba(0, 0, 0, 0.15)',
+                boxShadow: "0px 6px 15px rgba(0, 0, 0, 0.15)",
               }}
             >
               <Grid container spacing={2}>
@@ -178,11 +174,11 @@ const AboutUs = () => {
                     value={formData.fullName}
                     onChange={handleChange}
                     inputProps={{
-                      pattern: '^[a-zA-Z\\s]*$',
+                      pattern: "^[a-zA-Z\\s]*$",
                     }}
                     sx={{
-                      '& .MuiInputBase-input': {
-                        fontSize: '16px',
+                      "& .MuiInputBase-input": {
+                        fontSize: "16px",
                       },
                     }}
                   />
@@ -198,8 +194,8 @@ const AboutUs = () => {
                     value={formData.email}
                     onChange={handleChange}
                     sx={{
-                      '& .MuiInputBase-input': {
-                        fontSize: '16px',
+                      "& .MuiInputBase-input": {
+                        fontSize: "16px",
                       },
                     }}
                   />
@@ -215,13 +211,13 @@ const AboutUs = () => {
                     value={formData.phoneNumber}
                     onChange={handleChange}
                     inputProps={{
-                      inputMode: 'numeric',
-                      pattern: '\\d*',
+                      inputMode: "numeric",
+                      pattern: "\\d*",
                       maxLength: 10,
                     }}
                     sx={{
-                      '& .MuiInputBase-input': {
-                        fontSize: '16px',
+                      "& .MuiInputBase-input": {
+                        fontSize: "16px",
                       },
                     }}
                   />
@@ -236,8 +232,8 @@ const AboutUs = () => {
                     value={formData.subject}
                     onChange={handleChange}
                     sx={{
-                      '& .MuiInputBase-input': {
-                        fontSize: '16px',
+                      "& .MuiInputBase-input": {
+                        fontSize: "16px",
                       },
                     }}
                   />
@@ -253,8 +249,8 @@ const AboutUs = () => {
                     value={formData.message}
                     onChange={handleChange}
                     sx={{
-                      '& .MuiInputBase-input': {
-                        fontSize: '16px',
+                      "& .MuiInputBase-input": {
+                        fontSize: "16px",
                       },
                     }}
                   />
@@ -265,12 +261,12 @@ const AboutUs = () => {
                     variant="contained"
                     fullWidth
                     sx={{
-                      backgroundColor: '#240844',
-                      color: '#fff',
-                      padding: '10px',
-                      '&:hover': {
-                        backgroundColor: 'white',
-                        color: 'black',
+                      backgroundColor: "#240844",
+                      color: "#fff",
+                      padding: "10px",
+                      "&:hover": {
+                        backgroundColor: "white",
+                        color: "black",
                       },
                     }}
                   >
@@ -280,17 +276,16 @@ const AboutUs = () => {
               </Grid>
             </Box>
           </Grid>
-        
         </Grid>
       </Box>
 
       {/* Google Map Section */}
       <Box
         sx={{
-          paddingX:1,
-          display: 'flex',
-          mb: { xs: -5, md: 0}, // Add margin-bottom for small screens only
-          mt:{xs:5,md:5}
+          paddingX: 1,
+          display: "flex",
+          mb: { xs: -5, md: 0 }, // Add margin-bottom for small screens only
+          mt: { xs: 5, md: 5 },
         }}
       >
         <Box
@@ -299,11 +294,10 @@ const AboutUs = () => {
           allowFullScreen
           loading="lazy"
           sx={{
-            
-            width: '100%',
-            height: { xs: '200px', md: '300px' },
+            width: "100%",
+            height: { xs: "200px", md: "300px" },
             border: 0,
-            borderRadius: '30px',
+            borderRadius: "30px",
           }}
         />
       </Box>
